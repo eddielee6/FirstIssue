@@ -1,0 +1,100 @@
+@import url(http://fonts.googleapis.com/css?family=Kite+One|Source+Sans+Pro:400);
+
+body {
+	background: #1B1B1B url('crossed_stripes.png');
+	color: #f1fdfe;
+	font-size: 100%;
+	text-align: center;
+}
+
+a {
+    color: #f1fdfe;
+    border-bottom: dotted 1px #f1fdfe;
+    text-decoration: none;
+}
+
+a:hover {
+	border-bottom: solid 1px #f1fdfe;
+    text-decoration: none;
+}
+
+.logo {
+	display: block;
+	margin: 3.5em auto 1.5em;
+}
+
+.tagline {
+	font-family: 'Kite One', sans-serif;
+	font-size: 1.5em;
+	margin: 1em 0 3em;
+}
+
+.follow {
+	display: block;
+	margin: 4em;
+}
+
+.aboutWrapper {
+    background: #fefefe;
+    color: #353535;
+    padding: 2em 0 3em;
+    text-align: left;
+    line-height: 1.4em;
+    font-family: 'Source Sans Pro', sans-serif;
+
+	-moz-box-shadow:inset 0px 6px 10px rgba(0,0,0,0.5);
+	-webkit-box-shadow:inset 0px 6px 10px rgba(0,0,0,0.5);
+	box-shadow:inset 0px 6px 10px rgba(0,0,0,0.5);
+}
+
+.aboutWrapper a, .aboutWrapper a:hover  {
+	color: #353535;
+	border-color: #353535;
+}
+
+.about {
+	width: 600px;
+	margin: 0 auto;
+}
+
+/*#mc_embed_signup {
+	margin: 2em;
+}
+
+#mc_embed_signup label {
+	text-align: center;
+}
+
+#mc_embed_signup input.email {
+	width: 300px;
+	margin: 0 auto;
+}
+
+#mc_embed_signup input.button {
+	width: 150px;
+	margin: 1em auto;
+}*/
+
+@media screen and (max-width: 600px) {
+	.logo {
+		width: 70%;
+		height: auto;
+		margin: 1.5em auto;
+	}
+
+	.tagline {
+		font-size: 1.3em;
+		margin: 1em 1.5em 2em;
+	}
+
+	.aboutWrapper {
+		padding: 1em 1.5em 2em;
+	}
+
+	.about {
+		width: 100%;
+	}
+}
+
+*.example.com
+65.52.128.33
