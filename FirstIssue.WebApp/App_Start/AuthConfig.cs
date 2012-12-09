@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Web.WebPages.OAuth;
 
-namespace FirstIssue
+namespace FirstIssue.WebApp
 {
     public static class AuthConfig
     {

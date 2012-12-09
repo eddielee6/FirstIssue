@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace FirstIssue.Controllers
+namespace FirstIssue.WebApp.Controllers
 {
     public partial class HomeController : Controller
     {

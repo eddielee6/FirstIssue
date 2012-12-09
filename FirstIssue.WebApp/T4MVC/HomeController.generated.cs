@@ -20,7 +20,7 @@ using System.Web.Mvc.Ajax;
 using System.Web.Mvc.Html;
 using System.Web.Routing;
 using T4MVC;
-namespace FirstIssue.Controllers
+namespace FirstIssue.WebApp.Controllers
 {
     public partial class HomeController
     {
@@ -87,7 +87,7 @@ namespace FirstIssue.Controllers
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public class T4MVC_HomeController : FirstIssue.Controllers.HomeController
+    public class T4MVC_HomeController : FirstIssue.WebApp.Controllers.HomeController
     {
         public T4MVC_HomeController() : base(Dummy.Instance) { }
 

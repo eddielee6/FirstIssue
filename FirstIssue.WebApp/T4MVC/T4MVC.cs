@@ -24,7 +24,7 @@ using T4MVC;
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public static class MVC
 {
-    public static FirstIssue.Controllers.HomeController Home = new FirstIssue.Controllers.T4MVC_HomeController();
+    public static FirstIssue.WebApp.Controllers.HomeController Home = new FirstIssue.WebApp.Controllers.T4MVC_HomeController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
 
