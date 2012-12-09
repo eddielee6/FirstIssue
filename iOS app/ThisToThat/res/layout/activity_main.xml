@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/main_background">
+
+    <TextView
+        android:id="@+id/applicationGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginBottom="10dp"
+        android:padding="2dp"
+        android:shadowColor="#273D51"
+        android:textStyle="bold"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="0.8"
+        android:textColor="#ECEFF0" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+  		android:weightSum="100">
+
+        <EditText
+            android:id="@+id/valueForConversion"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="80"
+            android:singleLine="true"
+            android:hint="Lets convert\u2026"
+            android:inputType="numberDecimal" />
+
+        <android.support.v7.widget.Space
+            android:id="@+id/space1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" />
+
+        <Button
+            android:id="@+id/selectBaseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:text="Type \u25BC" />
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/convertToSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="#FF8B1500"
+        android:textSize="12pt" />
+
+    <TextView
+        android:id="@+id/conversionResult"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:shadowColor="#273D51"
+        android:textStyle="bold"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="0.8"
+        android:textColor="#ECEFF0"
+        android:text="Converted Value"
+        android:textSize="30sp" />
+
+</LinearLayout>
