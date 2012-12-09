@@ -22,6 +22,8 @@ namespace FirstIssue.WebApp
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/Styles/main.css"));
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/Styles/normalize.min.css"));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
