@@ -185,7 +185,7 @@
   <ItemGroup>
     <Content Include="Content\Images\dark-logo.png" />
     <Content Include="Content\Styles\main.css" />
-    <Content Include="Content\Styles\normalize.min.css" />
+    <Content Include="Content\Styles\normalize.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.8.3.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.3.js" />
