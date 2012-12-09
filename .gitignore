@@ -9,3 +9,5 @@ Thumbs.db
 
 */bin/
 */obj/
+*.user
+*.suo
