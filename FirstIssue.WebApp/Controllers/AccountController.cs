@@ -6,19 +6,24 @@ using System.Web.Mvc;
 
 namespace FirstIssue.WebApp.Controllers
 {
-    public partial class HomeController : Controller
+    public class AccountController : Controller
     {
-        public virtual ActionResult Index()
+        public ActionResult Login()
         {
             return View();
         }
 
-        public virtual ActionResult About()
+        public ActionResult ForgotPassword()
         {
             return View();
         }
 
-        public virtual ActionResult Contact()
+        public ActionResult ResetPassword()
+        {
+            return View();
+        }
+
+        public ActionResult Register()
         {
             return View();
         }

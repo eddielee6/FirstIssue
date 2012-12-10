@@ -13,10 +13,49 @@ namespace FirstIssue.WebApp
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //Home routes
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                name: "Home_Index",
+                url: "",
+                defaults: new { controller = "Home", action = "Index" }
+            );
+
+            routes.MapRoute(
+                name: "Home_About",
+                url: "About",
+                defaults: new { controller = "Home", action = "About" }
+            );
+
+            routes.MapRoute(
+                name: "Home_Contact",
+                url: "Contact",
+                defaults: new { controller = "Home", action = "Contact" }
+            );
+
+
+            //Account routes
+            routes.MapRoute(
+                name: "Account_Login",
+                url: "Login",
+                defaults: new { controller = "Account", action = "Login" }
+            );
+
+            routes.MapRoute(
+                name: "Account_ForgotPassword",
+                url: "ForgotPassword",
+                defaults: new { controller = "Account", action = "ForgotPassword" }
+            );
+
+            routes.MapRoute(
+                name: "Account_ResetPassword",
+                url: "ResetPassword",
+                defaults: new { controller = "Account", action = "ResetPassword" }
+            );
+
+            routes.MapRoute(
+                name: "Account_Register",
+                url: "Register",
+                defaults: new { controller = "Account", action = "Register" }
             );
         }
     }
