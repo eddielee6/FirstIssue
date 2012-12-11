@@ -25,6 +25,7 @@ using T4MVC;
 public static class MVC
 {
     public static FirstIssue.WebApp.Controllers.AccountController Account = new FirstIssue.WebApp.Controllers.T4MVC_AccountController();
+    public static FirstIssue.WebApp.Controllers.ErrorController Error = new FirstIssue.WebApp.Controllers.T4MVC_ErrorController();
     public static FirstIssue.WebApp.Controllers.HomeController Home = new FirstIssue.WebApp.Controllers.T4MVC_HomeController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }

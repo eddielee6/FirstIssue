@@ -11,7 +11,8 @@ namespace FirstIssue.WebApp
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            RegisterIgnoreRoutes(routes);
+            RegisterErrorRoutes(routes);
 
             //Home routes
             routes.MapRoute(
@@ -56,6 +57,44 @@ namespace FirstIssue.WebApp
                 name: "Account_Register",
                 url: "Register",
                 defaults: new { controller = "Account", action = "Register" }
+            );
+        }
+
+        private static void RegisterIgnoreRoutes(RouteCollection routes)
+        {            
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.IgnoreRoute("{file}.gif");
+            routes.IgnoreRoute("{file}.png");
+            routes.IgnoreRoute("{file}.js");
+            routes.IgnoreRoute("{file}.html");
+            routes.IgnoreRoute("{file}.htm");
+            routes.IgnoreRoute("{file}.css");
+        }
+
+        private static void RegisterErrorRoutes(RouteCollection routes)
+        {
+            routes.MapRoute(
+                "Error404",
+                "Error404",
+                MVC.Error.Error404()
+            );
+
+            routes.MapRoute(
+                "Error403",
+                "Error403",
+                MVC.Error.Error403()
+            );
+
+            routes.MapRoute(
+                "Error500",
+                "Error500",
+                MVC.Error.Error500()
+            );
+
+            routes.MapRoute(
+                "StaticErrorPage",
+                "StaticErrorPage",
+                MVC.Error.StaticErrorPage()
             );
         }
     }

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace FirstIssue.WebApp.Controllers
 {
+    [AllowAnonymous]
     public partial class HomeController : Controller
     {
         public virtual ActionResult Index()

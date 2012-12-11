@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace FirstIssue.WebApp.Controllers
 {
+    [AllowAnonymous]
     public partial class AccountController : Controller
     {
         public virtual ActionResult Login()
