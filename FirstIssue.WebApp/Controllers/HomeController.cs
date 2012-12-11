@@ -14,6 +14,7 @@ namespace FirstIssue.WebApp.Controllers
             return View();
         }
 
+        [RequireHttps]
         public virtual ActionResult About()
         {
             return View();
