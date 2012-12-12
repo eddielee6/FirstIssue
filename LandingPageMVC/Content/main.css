@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Montaga|Source+Sans+Pro:400);
 
 body {
-	background: #fefefe;
+	background: #fefefe url('../Content/cream_dust.png');
 	color: #846969;
 	font-size: 100%;
 	text-align: center;
@@ -35,7 +35,7 @@ hr {
     color: #846969;
     background-color: #846969;
     height: 3px;
-    margin: 2em auto;
+    margin: 2.2em auto;
 }
 
 .textWrap {
