@@ -114,7 +114,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="Content\crossed_stripes.png" />
     <Content Include="Content\logo.png" />
     <Content Include="Content\main.css" />
     <Content Include="Content\normalize.min.css" />
