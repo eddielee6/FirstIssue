@@ -208,14 +208,14 @@
     <Compile Include="App_Start\StructureMapConfig.cs" />
     <Compile Include="App_Start\StructureMapRegistry.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\ErrorController\ErrorController.StaticErrorPage.cs" />
-    <Compile Include="Controllers\ErrorController\ErrorController.Error500.cs" />
-    <Compile Include="Controllers\ErrorController\ErrorController.Error404.cs" />
-    <Compile Include="Controllers\ErrorController\ErrorController.Error403.cs" />
-    <Compile Include="Controllers\ErrorController\ErrorController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Mvc\AccountController.cs" />
+    <Compile Include="Controllers\Mvc\BaseController.cs" />
+    <Compile Include="Controllers\Mvc\ErrorController\ErrorController.StaticErrorPage.cs" />
+    <Compile Include="Controllers\Mvc\ErrorController\ErrorController.Error500.cs" />
+    <Compile Include="Controllers\Mvc\ErrorController\ErrorController.Error404.cs" />
+    <Compile Include="Controllers\Mvc\ErrorController\ErrorController.Error403.cs" />
+    <Compile Include="Controllers\Mvc\ErrorController\ErrorController.cs" />
+    <Compile Include="Controllers\Mvc\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -308,7 +308,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Mvc\" />
     <Folder Include="Controllers\WebApi\" />
   </ItemGroup>
   <ItemGroup>
