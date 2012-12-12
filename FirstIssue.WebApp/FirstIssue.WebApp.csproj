@@ -208,15 +208,22 @@
     <Compile Include="App_Start\StructureMapConfig.cs" />
     <Compile Include="App_Start\StructureMapRegistry.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\Mvc\AccountController.cs" />
+    <Compile Include="Controllers\Mvc\AccountController\AccountController.cs" />
+    <Compile Include="Controllers\Mvc\AccountController\AccountController.Login.cs" />
+    <Compile Include="Controllers\Mvc\AccountController\AccountController.ForgotPassword.cs" />
+    <Compile Include="Controllers\Mvc\AccountController\AccountController.ResetPassword.cs" />
+    <Compile Include="Controllers\Mvc\AccountController\AccountController.Register.cs" />
     <Compile Include="Controllers\Mvc\BaseController.cs" />
     <Compile Include="Controllers\Mvc\ErrorController\ErrorController.StaticErrorPage.cs" />
     <Compile Include="Controllers\Mvc\ErrorController\ErrorController.Error500.cs" />
     <Compile Include="Controllers\Mvc\ErrorController\ErrorController.Error404.cs" />
     <Compile Include="Controllers\Mvc\ErrorController\ErrorController.Error403.cs" />
     <Compile Include="Controllers\Mvc\ErrorController\ErrorController.cs" />
-    <Compile Include="Controllers\Mvc\HomeController.cs" />
-    <Compile Include="Controllers\WebApi\Class1.cs" />
+    <Compile Include="Controllers\Mvc\HomeController\HomeController.Contact.cs" />
+    <Compile Include="Controllers\Mvc\HomeController\HomeController.About.cs" />
+    <Compile Include="Controllers\Mvc\HomeController\HomeController.Index.cs" />
+    <Compile Include="Controllers\Mvc\HomeController\HomeController.cs" />
+    <Compile Include="Controllers\WebApi\ApiBaseController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
