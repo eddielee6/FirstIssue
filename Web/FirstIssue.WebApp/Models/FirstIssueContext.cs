@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Web;
+
+using FirstIssue.WebApp.AppCode.ExtensionMethods;
 
 namespace FirstIssue.WebApp.Models
 {
@@ -33,6 +37,6 @@ namespace FirstIssue.WebApp.Models
                 WithMany(m => m.Issues).
                 HasForeignKey(i => i.MagazineId).
                 WillCascadeOnDelete(false);            
-        }
+        }       
     }
 }

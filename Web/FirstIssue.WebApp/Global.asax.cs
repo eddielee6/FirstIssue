@@ -31,10 +31,11 @@ namespace FirstIssue.WebApp
 
         private static void SetupDatabase()
         {
-            // Cant use this initializer in production - got to be migrations
+            // Cant use this initializer in production - got to be migrations            
             Database.SetInitializer(new FirstIssueInitializer());
             var context = new FirstIssueContext();
             context.Database.CreateIfNotExists();
+            context.Database.Initialize(false);
         }
 
         private static void SetupBlobStorage()

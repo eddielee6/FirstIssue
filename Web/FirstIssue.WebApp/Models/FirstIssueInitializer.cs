@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Web;
+
+using FirstIssue.WebApp.AppCode.ExtensionMethods;
 
 namespace FirstIssue.WebApp.Models
 {
@@ -10,9 +14,14 @@ namespace FirstIssue.WebApp.Models
     {
         protected override void Seed(FirstIssueContext context)
         {
-            base.Seed(context);
+            var elmahScript = Assembly.GetExecutingAssembly().GetFileResourceAsString("FirstIssue.WebApp.Models.elmah.sql");
+            var scriptSnippets = Regex.Split(elmahScript, "GO");
 
-            // Test data + raw sql here 
+            foreach (var scriptSnippet in scriptSnippets)
+            {
+                context.Database.ExecuteSqlCommand(scriptSnippet);
+            }
         }
     }
+    
 }

@@ -144,7 +144,6 @@ C:\Users\Matt\Documents\GitHub\FirstIssue\Web\FirstIssue.WebApp\bin\Mono.Math.xm
 C:\Users\Matt\Documents\GitHub\FirstIssue\Web\FirstIssue.WebApp\obj\Debug\FirstIssue.WebApp.dll
 C:\Users\Matt\Documents\GitHub\FirstIssue\Web\FirstIssue.WebApp\obj\Debug\FirstIssue.WebApp.pdb
 C:\Users\Matt\Documents\GitHub\FirstIssue\Web\FirstIssue.WebApp\bin\Elmah.dll
-C:\Users\Matt\Documents\GitHub\FirstIssue\Web\FirstIssue.WebApp\obj\Debug\FirstIssue.WebApp.csprojResolveAssemblyReference.cache
 C:\Users\Matt\Documents\GitHub\FirstIssue\Web\FirstIssue.WebApp\bin\AutoMapper.dll
 C:\Users\Matt\Documents\GitHub\FirstIssue\Web\FirstIssue.WebApp\bin\AutoMapper.xml
 C:\Users\Matt\Documents\GitHub\FirstIssue\Web\FirstIssue.WebApp\bin\System.Web.Optimization.xml

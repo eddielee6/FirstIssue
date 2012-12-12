@@ -200,6 +200,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppCode\ExtensionMethods\AssemblyExtensions.cs" />
     <Compile Include="AppCode\ExtensionMethods\HttpRequestBaseExtensions.cs" />
     <Compile Include="AppCode\ExtensionMethods\HttpRequestMessageExtensions.cs" />
     <Compile Include="AppCode\ExtensionMethods\StringExtensions.cs" />
@@ -240,6 +241,7 @@
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Azure\CloudStorageAccountFactory.cs" />
     <Compile Include="Models\Azure\MagazineCoverContext.cs" />
+    <EmbeddedResource Include="Models\elmah.sql" />
     <Compile Include="Models\Contributor.cs" />
     <Compile Include="Models\FirstIssueInitializer.cs" />
     <Compile Include="Models\Issue.cs" />
