@@ -12,27 +12,26 @@ using FirstIssue.WebApp.Models.Azure;
 
 namespace FirstIssue.WebApp
 {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-    // visit http://go.microsoft.com/?LinkId=9394801
-
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            HttpFilterConfig.RegisterHttpGlobalFilters(GlobalConfiguration.Configuration.Filters);
             AuthConfig.RegisterAuth();
 
+            // These dont belong here but not sure where should go ?  
             SetupDatabase();
             SetupBlobStorage();
         }
 
         private static void SetupDatabase()
         {
+            // Cant use this initializer in production - got to be migrations
             Database.SetInitializer(new FirstIssueInitializer());
             var context = new FirstIssueContext();
             context.Database.CreateIfNotExists();

@@ -60,19 +60,19 @@ namespace FirstIssue.WebApp.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNamesClass
         {
-            public readonly string Login = "Login";
             public readonly string ForgotPassword = "ForgotPassword";
-            public readonly string ResetPassword = "ResetPassword";
+            public readonly string Login = "Login";
             public readonly string Register = "Register";
+            public readonly string ResetPassword = "ResetPassword";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
-            public const string Login = "Login";
             public const string ForgotPassword = "ForgotPassword";
-            public const string ResetPassword = "ResetPassword";
+            public const string Login = "Login";
             public const string Register = "Register";
+            public const string ResetPassword = "ResetPassword";
         }
 
 
@@ -103,27 +103,27 @@ namespace FirstIssue.WebApp.Controllers
     {
         public T4MVC_AccountController() : base(Dummy.Instance) { }
 
-        public override System.Web.Mvc.ActionResult Login()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
-            return callInfo;
-        }
-
         public override System.Web.Mvc.ActionResult ForgotPassword()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ForgotPassword);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult ResetPassword()
+        public override System.Web.Mvc.ActionResult Login()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ResetPassword);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
             return callInfo;
         }
 
         public override System.Web.Mvc.ActionResult Register()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Register);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult ResetPassword()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ResetPassword);
             return callInfo;
         }
 

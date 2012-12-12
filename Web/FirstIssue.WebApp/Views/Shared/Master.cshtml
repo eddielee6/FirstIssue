@@ -20,7 +20,7 @@
         <link rel="apple-touch-icon" sizes="72x72" href="@Url.Content("~/Content/Images/Icons/icon-ipad-1x.png")" />
         <link rel="apple-touch-icon" sizes="144x144" href="@Url.Content("~/Content/Images/Icons/icon-ipad-2x.png")" />
 
-        @Styles.Render("~/Styles/CSS")
+        @Styles.Render(Links.bundles.styles.common)
 
         @RenderSection("Head", false)
     </head>
@@ -49,7 +49,8 @@
             @RenderBody()
             @{Html.RenderPartial("Footer");}
         </div>
-        @Scripts.Render("~/Scripts/Libraries")
+        @Scripts.Render(Links.bundles.scripts.jquery)
+        @Scripts.Render(Links.bundles.scripts.common)        
         @RenderSection("Scripts", false)
     </body>
 </html>
