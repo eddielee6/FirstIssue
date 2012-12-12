@@ -8,8 +8,7 @@ using System.Web.Mvc;
 namespace FirstIssue.WebApp.Controllers
 {
     public partial class ErrorController
-    {
-        [AllowAnonymous]
+    {        
         public virtual ActionResult Error500()
         {
             SetupResponse(HttpStatusCode.InternalServerError);

@@ -13,10 +13,10 @@ namespace FirstIssue.WebApp.Controllers
         {
             return View();
         }
-
-        [RequireHttps]
+                
         public virtual ActionResult About()
         {
+            throw new Exception("500 error page test");
             return View();
         }
 

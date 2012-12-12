@@ -7,8 +7,7 @@ using System.Web.Mvc;
 namespace FirstIssue.WebApp.Controllers
 {
     public partial class ErrorController
-    {
-        [AllowAnonymous]
+    {     
         public virtual ActionResult StaticErrorPage()
         {
             return File(Server.MapPath("/views/error/") + "StaticErrorPage.html", "text/html");
