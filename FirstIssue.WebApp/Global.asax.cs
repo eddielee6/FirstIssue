@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using FirstIssue.WebApp.Models;
+using FirstIssue.WebApp.Models.Azure;
 
 namespace FirstIssue.WebApp
 {
@@ -26,9 +27,23 @@ namespace FirstIssue.WebApp
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
 
+            SetupDatabase();
+            SetupBlobStorage();
+        }
+
+        private static void SetupDatabase()
+        {
             Database.SetInitializer(new FirstIssueInitializer());
             var context = new FirstIssueContext();
             context.Database.CreateIfNotExists();
+        }
+
+        private static void SetupBlobStorage()
+        {
+            var storageAccount = CloudStorageAccountFactory.CreateCloudStorageAccount();
+            var blobClient = storageAccount.CreateCloudBlobClient();
+            var container = blobClient.GetContainerReference(MagazineCoverContext.MagazineCoverContainer);
+            container.CreateIfNotExists();            
         }
     }
 }
