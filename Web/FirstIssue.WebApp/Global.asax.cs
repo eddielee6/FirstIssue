@@ -35,7 +35,7 @@ namespace FirstIssue.WebApp
             Database.SetInitializer(new FirstIssueInitializer());
             var context = new FirstIssueContext();
             context.Database.CreateIfNotExists();
-            context.Database.Initialize(false);
+            // context.Database.Initialize(false);
         }
 
         private static void SetupBlobStorage()
