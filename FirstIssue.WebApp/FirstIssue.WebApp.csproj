@@ -216,6 +216,7 @@
     <Compile Include="Controllers\Mvc\ErrorController\ErrorController.Error403.cs" />
     <Compile Include="Controllers\Mvc\ErrorController\ErrorController.cs" />
     <Compile Include="Controllers\Mvc\HomeController.cs" />
+    <Compile Include="Controllers\WebApi\Class1.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -308,7 +309,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\WebApi\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
