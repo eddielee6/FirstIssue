@@ -10,7 +10,7 @@ using FirstIssue.WebApp.AppCode.ExtensionMethods;
 
 namespace FirstIssue.WebApp.Models
 {
-    public class FirstIssueInitializer : DropCreateDatabaseIfModelChanges<FirstIssueContext>
+    public class FirstIssueInitializer : CreateDatabaseIfNotExists<FirstIssueContext>
     {
         protected override void Seed(FirstIssueContext context)
         {

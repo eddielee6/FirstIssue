@@ -34,7 +34,7 @@ namespace FirstIssue.WebApp
             // Cant use this initializer in production - got to be migrations            
             Database.SetInitializer(new FirstIssueInitializer());
             var context = new FirstIssueContext();
-            context.Database.CreateIfNotExists();
+            context.Database.Initialize(true);
             // context.Database.Initialize(false);
         }
 
