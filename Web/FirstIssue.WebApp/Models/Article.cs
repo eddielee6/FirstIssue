@@ -28,5 +28,7 @@ namespace FirstIssue.WebApp.Models
         public string Content { get; set; }
 
         public int Order { get; set; }
+
+        public string test { get; set; }
     }
 }

@@ -1,0 +1,15 @@
+﻿<p>On October 14, <a href="http://en.wikipedia.org/wiki/Felix_Baumgartner">Felix Baumgartner</a> completed a <a href="http://en.wikipedia.org/wiki/Red_Bull_Stratos">record-breaking skydive</a>. A reader of <a href="http://www.howtospotapsychopath.com/">my blog</a> asked:</p>
+
+<blockquote>
+  <p>How did Baumgartner break the sound barrier by falling? I’ve always thought there was some kind of maximum velocity because of drag, even for someone trying to minimize it, in the vicinity of 200&nbsp;km/h. […]</p>
+  
+  <p>In the same vein, to what extent could an astronaut jump out of the International Space Station?</p>
+</blockquote>
+
+<h2>Velocity</h2>
+
+<p>The usually-quoted human terminal velocity — as you say, around 200&nbsp;km/h for a skydiver in “star” pose, well over 300&nbsp;km/h for a skydiver in a head-down pose with limbs tucked in — applies only to normal skydives, which don’t start at such a high altitude that the divers even need supplementary oxygen, much less an actual pressure suit.</p>
+
+<p>15,000 feet (about 4.6 kilometers) is a <em>high</em> jump altitude for a recreational skydiver. At that altitude, atmospheric pressure is still above 50% of what it is at sea level. Unacclimated people won’t be able to get much done at that pressure, and will probably start feeling <a href="http://en.wikipedia.org/wiki/Altitude_sickness">pretty miserable</a> if they stay there for a long time, but if you’re just sitting in a perfectly good airplane out of which you shortly intend to jump, it’s not a huge problem.</p>
+
+<p>At a mere 5,000 feet (about 1.5 kilometers), you’ve still got 80% of sea-level air pressure. The excitement of the impending jump — which at this altitude won’t give you a lot of free-fall time — will have much more of an effect on you than the thinning of the air.<sup id="fnref:a33f2"><a href="#fn:a33f2" rel="footnote" class="ipfootnote_ref">1</a></sup></p>
