@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 
 using FirstIssue.WebApp.AppCode.ExtensionMethods;
+using FirstIssue.WebApp.Models.Azure;
 
 namespace FirstIssue.WebApp.Models
 {
@@ -22,12 +23,14 @@ namespace FirstIssue.WebApp.Models
                 context.Database.ExecuteSqlCommand(scriptSnippet);
             }
 
-            // test data 
-            
-            AddMagazine(context);
+            var blobStorage = new MagazineCoverContext(CloudStorageAccountFactory.CreateCloudStorageAccount());
+            var newId = Guid.NewGuid().ToString();
+            blobStorage.AddSnapImage(newId, Assembly.GetExecutingAssembly().GetManifestResourceStream("FirstIssue.WebApp.Models.Initializer.DefaultCover.png"));
+
+            AddMagazine(context, newId);
             context.SaveChanges();
 
-            AddIssues(context);
+            AddIssues(context, newId);
             context.SaveChanges();
 
             AddIssue1Articles(context);
@@ -37,27 +40,26 @@ namespace FirstIssue.WebApp.Models
             context.SaveChanges();
         }
 
-        private static void AddMagazine(FirstIssueContext context)
+        private static void AddMagazine(FirstIssueContext context, string coverImageId)
         {
-
-
             var magazine = new Magazine()
             {
                 Name = "The Magazine",
                 Description = Assembly.GetExecutingAssembly().GetFileResourceAsString("FirstIssue.WebApp.Models.Initializer.MagazineDescription.txt"),
-                DefaultCoverUrl = ""
+                DefaultCoverImageId = coverImageId
             };
             context.Magazines.Add(magazine);
         }
 
-        private static void AddIssues(FirstIssueContext context)
-        {
+        private static void AddIssues(FirstIssueContext context, string coverImageId)
+        {   
             var issue = new Issue()
             {
                 MagazineId = 1,
                 IssueNumber = 1,
                 PublishDate = DateTime.Parse("11-10-2012"),
-                IsPublished = false
+                IsPublished = false,
+                CoverImageId = coverImageId
             };
             context.Issues.Add(issue);
 
@@ -66,7 +68,8 @@ namespace FirstIssue.WebApp.Models
                 MagazineId = 1,
                 IssueNumber = 2,
                 PublishDate = DateTime.Parse("25-10-2012"),
-                IsPublished = false
+                IsPublished = false,
+                CoverImageId = coverImageId
             };
             context.Issues.Add(issue);
 
@@ -75,7 +78,8 @@ namespace FirstIssue.WebApp.Models
                 MagazineId = 1,
                 IssueNumber = 3,
                 PublishDate = DateTime.Parse("11-08-2012"),
-                IsPublished = false
+                IsPublished = false,
+                CoverImageId = coverImageId
             };
             context.Issues.Add(issue);            
         }

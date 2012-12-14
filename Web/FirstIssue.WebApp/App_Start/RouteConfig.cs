@@ -13,28 +13,13 @@ namespace FirstIssue.WebApp
         {
             RegisterIgnoreRoutes(routes);
             RegisterErrorRoutes(routes);
+            RegisterHomeRoutes(routes);
+            RegisterAccountRoutes(routes);
+        }
 
-            //Home routes
-            routes.MapRoute(
-                name: "Home_Index",
-                url: "",
-                defaults: new { controller = "Home", action = "Index" }
-            );
-
-            routes.MapRoute(
-                name: "Home_About",
-                url: "About",
-                defaults: new { controller = "Home", action = "About" }
-            );
-
-            routes.MapRoute(
-                name: "Home_Contact",
-                url: "Contact",
-                defaults: new { controller = "Home", action = "Contact" }
-            );
-
-
-            //Account routes
+        private static void RegisterAccountRoutes(RouteCollection routes)
+        {
+            // Account routes
             routes.MapRoute(
                 name: "Account_Login",
                 url: "Login",
@@ -58,6 +43,22 @@ namespace FirstIssue.WebApp
                 url: "Register",
                 defaults: new { controller = "Account", action = "Register" }
             );
+        }
+
+        private static void RegisterHomeRoutes(RouteCollection routes)
+        {
+            // Home routes
+            routes.MapRoute(
+                name: "Home_Index",
+                url: "",
+                defaults: new { controller = "Home", action = "Index" }
+            );
+
+            routes.MapRoute(
+                name: "Home_About",
+                url: "About",
+                defaults: new { controller = "Home", action = "About" }
+            );            
         }
 
         private static void RegisterIgnoreRoutes(RouteCollection routes)

@@ -28,26 +28,13 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand" href="@Url.RouteUrl("Home_Index")">First Issue</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="@Url.RouteUrl("Home_Index")">Home</a></li>
-                            <li><a href="@Url.RouteUrl("Home_About")">About</a></li>
-                            <li><a href="@Url.RouteUrl("Home_Contact")">Contact</a></li>
-                        </ul>
-
-                        <form class="navbar-form pull-right">
-                            <input class="span2" type="text" placeholder="Email">
-                            <input class="span2" type="password" placeholder="Password">
-                            <button type="button" class="btn" onclick="window.location.href='@Url.RouteUrl("Account_Login")'">Sign in</button>
-                        </form>
-                    </div>
+                    <a class="brand" href="@Url.Home()">First Issue</a>                    
                 </div>
             </div>
         </div>
         <div class="container">
             @RenderBody()
-            @{Html.RenderPartial("Footer");}
+            @{Html.RenderPartial(MVC.Shared.Views.Footer);}
         </div>
         @Scripts.Render(Links.bundles.scripts.jquery)
         @Scripts.Render(Links.bundles.scripts.common)        

@@ -296,6 +296,7 @@
     <EmbeddedResource Include="Models\Initializer\Issue2Article2.txt" />
     <EmbeddedResource Include="Models\Initializer\Issue2Article3.txt" />
     <EmbeddedResource Include="Models\Initializer\Issue2Article4.txt" />
+    <EmbeddedResource Include="Models\Initializer\DefaultCover.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\jquery-1.8.3.js" />
     <Content Include="Scripts\jquery-1.8.3.min.js" />
@@ -331,7 +332,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />

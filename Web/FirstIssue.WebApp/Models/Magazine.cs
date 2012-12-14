@@ -16,9 +16,9 @@ namespace FirstIssue.WebApp.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// Store images in blob service then can reference directly by URL in HTML
+        /// Id of blob in azure
         /// </summary>
-        public string DefaultCoverUrl { get; set; }
+        public string DefaultCoverImageId { get; set; }
 
         public virtual ICollection<Contributor> Contributors { get; set; }
         public virtual ICollection<Subscriber> Subscribers { get; set; }
