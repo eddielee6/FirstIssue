@@ -15,6 +15,27 @@ namespace FirstIssue.WebApp
             RegisterErrorRoutes(routes);
             RegisterHomeRoutes(routes);
             RegisterAccountRoutes(routes);
+            RegisterMagazineRoutes(routes);
+        }
+
+        private static void RegisterIgnoreRoutes(RouteCollection routes)
+        {
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.IgnoreRoute("{file}.gif");
+            routes.IgnoreRoute("{file}.png");
+            routes.IgnoreRoute("{file}.js");
+            routes.IgnoreRoute("{file}.html");
+            routes.IgnoreRoute("{file}.htm");
+            routes.IgnoreRoute("{file}.css");
+        }
+
+        private static void RegisterMagazineRoutes(RouteCollection routes)
+        {
+            routes.MapRoute(
+                "Magazine_List",
+                "Magazines",
+                MVC.Magazine.ListMagazines()
+            );
         }
 
         private static void RegisterAccountRoutes(RouteCollection routes)
@@ -59,18 +80,7 @@ namespace FirstIssue.WebApp
                 url: "About",
                 defaults: new { controller = "Home", action = "About" }
             );            
-        }
-
-        private static void RegisterIgnoreRoutes(RouteCollection routes)
-        {            
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.IgnoreRoute("{file}.gif");
-            routes.IgnoreRoute("{file}.png");
-            routes.IgnoreRoute("{file}.js");
-            routes.IgnoreRoute("{file}.html");
-            routes.IgnoreRoute("{file}.htm");
-            routes.IgnoreRoute("{file}.css");
-        }
+        }       
 
         private static void RegisterErrorRoutes(RouteCollection routes)
         {

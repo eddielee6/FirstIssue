@@ -233,6 +233,8 @@
     <Compile Include="Controllers\Mvc\HomeController\HomeController.About.cs" />
     <Compile Include="Controllers\Mvc\HomeController\HomeController.Index.cs" />
     <Compile Include="Controllers\Mvc\HomeController\HomeController.cs" />
+    <Compile Include="Controllers\Mvc\MagazineController\MagazineController.ListMagazines.cs" />
+    <Compile Include="Controllers\Mvc\MagazineController\MagazineController.cs" />
     <Compile Include="Controllers\WebApi\ActionFilters\UnhandledExceptionFilter.cs" />
     <Compile Include="Controllers\WebApi\ApiBaseController.cs" />
     <Compile Include="Global.asax.cs">
@@ -241,6 +243,7 @@
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Azure\CloudStorageAccountFactory.cs" />
     <Compile Include="Models\Azure\MagazineCoverContext.cs" />
+    <Compile Include="ViewModels\Magazine\ListMagazinesViewModel.cs" />
     <EmbeddedResource Include="Models\Initializer\elmah.sql" />
     <Compile Include="Models\Contributor.cs" />
     <Compile Include="Models\Initializer\FirstIssueInitializer.cs" />
@@ -253,6 +256,9 @@
     <Compile Include="T4MVC\AccountController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="T4MVC\ArticleController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="T4MVC\BaseController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -261,6 +267,12 @@
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="T4MVC\HomeController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\IssueController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T4MVC\MagazineController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="T4MVC\SharedController.generated.cs">
@@ -339,9 +351,12 @@
     <Content Include="Views\Error\Error403.cshtml" />
     <Content Include="Views\Error\Error404.cshtml" />
     <Content Include="Views\Error\Error500.cshtml" />
+    <Content Include="Views\Magazine\ListMagazines.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Article\" />
+    <Folder Include="Views\Issue\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

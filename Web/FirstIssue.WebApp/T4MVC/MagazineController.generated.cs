@@ -22,13 +22,13 @@ using System.Web.Routing;
 using T4MVC;
 namespace FirstIssue.WebApp.Controllers
 {
-    public partial class HomeController
+    public partial class MagazineController
     {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public HomeController() { }
+        public MagazineController() { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        protected HomeController(Dummy d) { }
+        protected MagazineController(Dummy d) { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         protected RedirectToRouteResult RedirectToAction(ActionResult result)
@@ -46,13 +46,13 @@ namespace FirstIssue.WebApp.Controllers
 
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public HomeController Actions { get { return MVC.Home; } }
+        public MagazineController Actions { get { return MVC.Magazine; } }
         [GeneratedCode("T4MVC", "2.0")]
         public readonly string Area = "";
         [GeneratedCode("T4MVC", "2.0")]
-        public readonly string Name = "Home";
+        public readonly string Name = "Magazine";
         [GeneratedCode("T4MVC", "2.0")]
-        public const string NameConst = "Home";
+        public const string NameConst = "Magazine";
 
         static readonly ActionNamesClass s_actions = new ActionNamesClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -60,17 +60,13 @@ namespace FirstIssue.WebApp.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNamesClass
         {
-            public readonly string About = "About";
-            public readonly string Contact = "Contact";
-            public readonly string Index = "Index";
+            public readonly string ListMagazines = "ListMagazines";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
-            public const string About = "About";
-            public const string Contact = "Contact";
-            public const string Index = "Index";
+            public const string ListMagazines = "ListMagazines";
         }
 
 
@@ -84,34 +80,20 @@ namespace FirstIssue.WebApp.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
-                public readonly string About = "About";
-                public readonly string Index = "Index";
+                public readonly string ListMagazines = "ListMagazines";
             }
-            public readonly string About = "~/Views/Home/About.cshtml";
-            public readonly string Index = "~/Views/Home/Index.cshtml";
+            public readonly string ListMagazines = "~/Views/Magazine/ListMagazines.cshtml";
         }
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public class T4MVC_HomeController : FirstIssue.WebApp.Controllers.HomeController
+    public class T4MVC_MagazineController : FirstIssue.WebApp.Controllers.MagazineController
     {
-        public T4MVC_HomeController() : base(Dummy.Instance) { }
+        public T4MVC_MagazineController() : base(Dummy.Instance) { }
 
-        public override System.Web.Mvc.ActionResult About()
+        public override System.Web.Mvc.ViewResult ListMagazines()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.About);
-            return callInfo;
-        }
-
-        public override System.Web.Mvc.ActionResult Contact()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Contact);
-            return callInfo;
-        }
-
-        public override System.Web.Mvc.ActionResult Index()
-        {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
+            var callInfo = new T4MVC_System_Web_Mvc_ViewResult(Area, Name, ActionNames.ListMagazines);
             return callInfo;
         }
 
