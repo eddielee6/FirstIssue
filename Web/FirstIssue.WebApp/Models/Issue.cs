@@ -13,6 +13,8 @@ namespace FirstIssue.WebApp.Models
         public int MagazineId { get; set; }
         public Magazine Magazine { get; set; }
 
+        public string IssueName { get; set; }
+
         [Key, Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IssueId { get; set; }
