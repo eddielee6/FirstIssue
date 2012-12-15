@@ -249,6 +249,7 @@
     <Compile Include="Controllers\WebApi\ActionFilters\UnhandledExceptionFilter.cs" />
     <Compile Include="Controllers\WebApi\ApiBaseController.cs" />
     <Compile Include="Controllers\WebApi\apiController.cs" />
+    <Compile Include="Controllers\WebApi\InitializeMagazineController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

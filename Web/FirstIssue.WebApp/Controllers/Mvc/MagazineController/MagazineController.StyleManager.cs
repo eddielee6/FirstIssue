@@ -10,11 +10,8 @@ namespace FirstIssue.WebApp.Controllers
     {
         public virtual ActionResult StyleMagazine()
         {
-
             return View();
         }
-
-
 
     }
 }

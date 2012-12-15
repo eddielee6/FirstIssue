@@ -6,6 +6,9 @@ using FirstIssue.WebApp.Models;
 
 namespace FirstIssue.WebApp.Controllers
 {
+    /// <summary>
+    /// Prefix all API routes with API/
+    /// </summary>
     public class ApiBaseController
     {
         protected FirstIssueContext _dbContext { get; private set; }
