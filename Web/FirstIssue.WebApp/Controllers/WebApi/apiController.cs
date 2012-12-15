@@ -23,7 +23,7 @@ namespace FirstIssue.WebApp.Controllers.WebApi
         public byte[] GetIssue(int id)
         {
 
-            byte[] binaryData = new byte[];
+            byte[] binaryData = new byte[1];
 
             var context = new FirstIssueContext();
             var i = (from c in context.Issues
@@ -56,7 +56,7 @@ namespace FirstIssue.WebApp.Controllers.WebApi
 
         public string GetContentHtml(string content)
         {
-            
+            return string.Empty;
         }
         
     }
