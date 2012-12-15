@@ -7,12 +7,15 @@ using System.Web;
 
 namespace FirstIssue.WebApp.Models
 {
-    public class DefaultStyle
+    public class MagazineStyle
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int DefaultStyleID { get; set; }
+        [Key, Column(Order = 0)]
+        public int MagazineId { get; set; }
+        public Magazine Magazine { get; set; }
 
-        public string Name { get; set; }
+        [Key, Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int MagazineStyleID { get; set; }
 
         public string BackgroundColour { get; set; }
 

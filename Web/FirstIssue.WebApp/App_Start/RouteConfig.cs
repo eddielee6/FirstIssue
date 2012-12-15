@@ -16,6 +16,7 @@ namespace FirstIssue.WebApp
             RegisterHomeRoutes(routes);
             RegisterAccountRoutes(routes);
             RegisterMagazineRoutes(routes);
+            RegisterArticleRoutes(routes);
         }
 
         private static void RegisterIgnoreRoutes(RouteCollection routes)
@@ -41,6 +42,21 @@ namespace FirstIssue.WebApp
                 "Magazine_Style",
                 "Magazines/Style",
                 MVC.Magazine.StyleMagazine()
+            );
+        }
+
+        private static void RegisterArticleRoutes(RouteCollection routes)
+        {
+            routes.MapRoute(
+                "Article_Render",
+                "RenderArticle",
+                MVC.Article.RenderArticle()
+            );
+
+            routes.MapRoute(
+                "Article_Render_CSS",
+                "Render_CSS",
+                MVC.Article.RenderCSS()
             );
         }
 
