@@ -235,6 +235,7 @@
     <Compile Include="Controllers\Mvc\HomeController\HomeController.cs" />
     <Compile Include="Controllers\Mvc\MagazineController\MagazineController.ListMagazines.cs" />
     <Compile Include="Controllers\Mvc\MagazineController\MagazineController.cs" />
+    <Compile Include="Controllers\Mvc\MagazineController\MagazineController.StyleManager.cs" />
     <Compile Include="Controllers\WebApi\ActionFilters\UnhandledExceptionFilter.cs" />
     <Compile Include="Controllers\WebApi\ApiBaseController.cs" />
     <Compile Include="Global.asax.cs">
@@ -243,16 +244,9 @@
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Azure\CloudStorageAccountFactory.cs" />
     <Compile Include="Models\Azure\MagazineCoverContext.cs" />
-    <Compile Include="ViewModels\Magazine\ListMagazinesViewModel.cs" />
-    <EmbeddedResource Include="Models\Initializer\elmah.sql" />
-    <Compile Include="Models\Contributor.cs" />
-    <Compile Include="Models\Initializer\FirstIssueInitializer.cs" />
-    <Compile Include="Models\Issue.cs" />
-    <Compile Include="Models\Magazine.cs" />
-    <Compile Include="Models\Subscriber.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\FirstIssueContext.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\DefaultStyle.cs" />
+    <Compile Include="Models\TextStyle.cs" />
+    <Compile Include="Models\SupportedFont.cs" />
     <Compile Include="T4MVC\AccountController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -262,7 +256,6 @@
     <Compile Include="T4MVC\BaseController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
-    <Compile Include="T4MVC\bundles.cs" />
     <Compile Include="T4MVC\ErrorController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -283,6 +276,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\Magazine\ListMagazinesViewModel.cs" />
+    <EmbeddedResource Include="Models\Initializer\elmah.sql" />
+    <Compile Include="Models\Contributor.cs" />
+    <Compile Include="Models\Initializer\FirstIssueInitializer.cs" />
+    <Compile Include="Models\Issue.cs" />
+    <Compile Include="Models\Magazine.cs" />
+    <Compile Include="Models\Subscriber.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\FirstIssueContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T4MVC\bundles.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
@@ -352,6 +356,7 @@
     <Content Include="Views\Error\Error404.cshtml" />
     <Content Include="Views\Error\Error500.cshtml" />
     <Content Include="Views\Magazine\ListMagazines.cshtml" />
+    <Content Include="Views\Magazine\StyleMagazine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

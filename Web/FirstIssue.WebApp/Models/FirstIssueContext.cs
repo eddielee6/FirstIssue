@@ -27,6 +27,9 @@ namespace FirstIssue.WebApp.Models
         public DbSet<Magazine> Magazines { get; set; }
         public DbSet<Subscriber> Subscribers { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<SupportedFont> SupportedFonts { get; set; }
+        public DbSet<TextStyle> TextStyles { get; set; }
+        public DbSet<DefaultStyle> DefaultStyles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

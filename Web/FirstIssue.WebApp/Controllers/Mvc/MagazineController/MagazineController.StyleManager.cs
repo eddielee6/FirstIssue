@@ -8,13 +8,13 @@ namespace FirstIssue.WebApp.Controllers
 {
     public partial class MagazineController
     {
-        /// <summary>
-        /// Lists Magazines for logged in user
-        /// </summary>        
-        public virtual ViewResult ListMagazines()
+        public virtual ActionResult StyleMagazine()
         {
 
             return View();
         }
+
+
+
     }
 }

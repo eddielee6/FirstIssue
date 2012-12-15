@@ -36,6 +36,12 @@ namespace FirstIssue.WebApp
                 "Magazines",
                 MVC.Magazine.ListMagazines()
             );
+
+            routes.MapRoute(
+                "Magazine_Style",
+                "Magazines/Style",
+                MVC.Magazine.StyleMagazine()
+            );
         }
 
         private static void RegisterAccountRoutes(RouteCollection routes)
