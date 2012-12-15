@@ -30,6 +30,7 @@ namespace FirstIssue.WebApp.Models
         public DbSet<SupportedFont> SupportedFonts { get; set; }
         public DbSet<TextStyle> TextStyles { get; set; }
         public DbSet<DefaultStyle> DefaultStyles { get; set; }
+        public DbSet<PushTest> PushTest { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

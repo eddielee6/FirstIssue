@@ -34,6 +34,9 @@ namespace PushNotificationService
             // see the MSDN topic at http://go.microsoft.com/fwlink/?LinkId=166357.
 
             return base.OnStart();
+
+            // Server=tcp:i84znvd46l.database.windows.net,1433;Database=firstissuedev;User ID=FirstIssue@i84znvd46l;Password=g5hUchuF;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;
+            
         }
     }
 }
