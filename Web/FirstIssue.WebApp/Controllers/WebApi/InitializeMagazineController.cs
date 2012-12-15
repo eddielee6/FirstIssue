@@ -22,17 +22,17 @@ namespace FirstIssue.WebApp.Controllers
         }
 
 
-        // API/{MagazineId}/IsLatestStylesheet/
-        public bool IsLatestStylesheet(int magazineId, string stylesheetHash)
-        {
-            return true;
-        }
+        //// API/{MagazineId}/IsLatestStylesheet/
+        //public bool IsLatestStylesheet(int magazineId, string stylesheetHash)
+        //{
+        //    return true;
+        //}
 
-        // API/{MagazineId}/Stylesheet/
-        public string GetStylesheet(int magazineId)
-        {
-            return string.Empty;
-        }
+        //// API/{MagazineId}/Stylesheet/
+        //public string GetStylesheet(int magazineId)
+        //{
+        //    return string.Empty;
+        //}
 
 
         // API/{MagazineId}/IsLatestAppStyle/
@@ -44,7 +44,10 @@ namespace FirstIssue.WebApp.Controllers
         // API/{MagazineId}/AppStyle/
         public JsonResult GetAppStyle(int magazineId)
         {
-            return new JsonResult();
+            return Json(new {
+                Stylesheet = "",
+                AppStyle = new object()
+            });
         }
     }
 }
