@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstIssue.WebApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,9 @@ namespace FirstIssue.WebApp.Controllers
     {
         public virtual ActionResult StyleMagazine()
         {
-            return View();
+            var viewModel = new StyleCreatorViewModel();
+            viewModel.DefaultStyles = _dbContext.DefaultStyles;
+            return View(viewModel);
         }
 
     }

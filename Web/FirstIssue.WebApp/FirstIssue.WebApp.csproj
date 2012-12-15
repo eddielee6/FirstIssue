@@ -245,7 +245,7 @@
     <Compile Include="Controllers\Mvc\ArticleController\ArticleController.RenderArticle.cs" />
     <Compile Include="Controllers\Mvc\MagazineController\MagazineController.ListMagazines.cs" />
     <Compile Include="Controllers\Mvc\MagazineController\MagazineController.cs" />
-    <Compile Include="Controllers\Mvc\MagazineController\MagazineController.StyleManager.cs" />
+    <Compile Include="Controllers\Mvc\MagazineController\MagazineController.StyleMagazine.cs" />
     <Compile Include="Controllers\WebApi\ActionFilters\UnhandledExceptionFilter.cs" />
     <Compile Include="Controllers\WebApi\ApiBaseController.cs" />
     <Compile Include="Controllers\WebApi\apiController.cs" />
@@ -261,6 +261,7 @@
     <Compile Include="Models\PushTest.cs" />
     <Compile Include="Models\TextStyle.cs" />
     <Compile Include="ViewModels\Magazine\ListMagazinesViewModel.cs" />
+    <Compile Include="ViewModels\Magazine\StyleCreatorViewModel.cs" />
     <EmbeddedResource Include="Models\Initializer\elmah.sql" />
     <Compile Include="Models\Contributor.cs" />
     <Compile Include="Models\Initializer\FirstIssueInitializer.cs" />

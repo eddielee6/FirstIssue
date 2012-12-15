@@ -16,12 +16,14 @@ namespace FirstIssue.WebApp.Controllers
 {
     public partial class ArticleController
     {
+        // TEMP
         public virtual ViewResult RenderArticle()
         {
 
             return View();
         }
 
+        //TEMP
         public virtual ContentResult RenderCSS()
         {
             var style = _dbContext.MagazineStyles.First();
