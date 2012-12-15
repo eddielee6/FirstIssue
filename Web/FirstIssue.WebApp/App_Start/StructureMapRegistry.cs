@@ -10,7 +10,7 @@ using FirstIssue.WebApp.AppCode.EmailService;
 using FirstIssue.WebApp.AppCode.StructureMap;
 
 
-namespace FirstIssue.WebApp.App_Start
+namespace FirstIssue.WebApp
 {
     public class StructureMapRegistry : Registry
     {

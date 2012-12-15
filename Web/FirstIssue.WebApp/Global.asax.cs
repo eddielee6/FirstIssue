@@ -9,6 +9,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using FirstIssue.WebApp.Models;
 using FirstIssue.WebApp.Models.Azure;
+using WebMatrix.WebData;
 
 namespace FirstIssue.WebApp
 {
@@ -23,27 +24,9 @@ namespace FirstIssue.WebApp
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             HttpFilterConfig.RegisterHttpGlobalFilters(GlobalConfiguration.Configuration.Filters);
             AuthConfig.RegisterAuth();
+            StructureMapConfig.ConfigureStructureMap();
 
-            // These dont belong here but not sure where should go ?  
-            SetupDatabase();
-            SetupBlobStorage();
-        }
-
-        private static void SetupDatabase()
-        {
-            // Cant use this initializer in production - got to be migrations            
-            Database.SetInitializer(new FirstIssueInitializer());
-            var context = new FirstIssueContext();
-            context.Database.Initialize(true);
-            // context.Database.Initialize(false);
-        }
-
-        private static void SetupBlobStorage()
-        {
-            var storageAccount = CloudStorageAccountFactory.CreateCloudStorageAccount();
-            var blobClient = storageAccount.CreateCloudBlobClient();
-            var container = blobClient.GetContainerReference(MagazineCoverContext.MagazineCoverContainer);
-            container.CreateIfNotExists();            
+            FirstIssueConfig.Initialize();
         }
     }
 }

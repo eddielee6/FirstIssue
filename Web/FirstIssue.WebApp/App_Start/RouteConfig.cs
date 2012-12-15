@@ -43,26 +43,38 @@ namespace FirstIssue.WebApp
             // Account routes
             routes.MapRoute(
                 name: "Account_Login",
-                url: "Login",
+                url: "Account/Login",
                 defaults: new { controller = "Account", action = "Login" }
             );
 
             routes.MapRoute(
-                name: "Account_ForgotPassword",
-                url: "ForgotPassword",
-                defaults: new { controller = "Account", action = "ForgotPassword" }
+                name: "Account_ExternalLoginsList",
+                url: "Account/ExternalLoginsList",
+                defaults: MVC.Account.ExternalLoginsList()
             );
 
             routes.MapRoute(
-                name: "Account_ResetPassword",
-                url: "ResetPassword",
-                defaults: new { controller = "Account", action = "ResetPassword" }
+                name: "Account_Manage",
+                url: "Account/Manage",
+                defaults: MVC.Account.Manage()
             );
 
             routes.MapRoute(
                 name: "Account_Register",
-                url: "Register",
-                defaults: new { controller = "Account", action = "Register" }
+                url: "Account/Register",
+                defaults: MVC.Account.Register()
+            );
+
+            routes.MapRoute(
+                name: "Account_RemoveExternalLogins",
+                url: "Account/RemoveExternalLogins",
+                defaults: MVC.Account.RemoveExternalLogins()
+            );
+
+              routes.MapRoute(
+                name: "Account_LogOff",
+                url: "Account/LogOff",
+                defaults: MVC.Account.LogOff()
             );
         }
 

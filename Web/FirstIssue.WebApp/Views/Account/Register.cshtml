@@ -1,9 +1,30 @@
-﻿@{
+﻿@model FirstIssue.WebApp.ViewModels.Account.RegisterViewModel
+@{
     ViewBag.Title = "Register";
-    ViewBag.Description = "";
-    Layout = MVC.Shared.Views.Master; 
+    Layout = MVC.Shared.Views.Master;
 }
 
-<div class="hero-unit">
-    <h1>@ViewBag.Title</h1>
-</div>
+<section class="hero-unit">
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+</section>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <p>
+        @Html.LabelFor(m => m.FullName)
+        @Html.TextBoxFor(m => m.FullName)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password)
+    </p>
+    <p>
+        @Html.LabelFor(m => m.ConfirmPassword)
+        @Html.PasswordFor(m => m.ConfirmPassword)
+    </p>
+<input type="submit" value="Register" />
+}

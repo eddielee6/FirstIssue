@@ -25,9 +25,6 @@ namespace FirstIssue.WebApp.Controllers
     public partial class AccountController
     {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public AccountController() { }
-
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         protected AccountController(Dummy d) { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -44,6 +41,48 @@ namespace FirstIssue.WebApp.Controllers
             return RedirectToRoutePermanent(callInfo.RouteValueDictionary);
         }
 
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ActionResult Login()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ActionResult Disassociate()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Disassociate);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ActionResult ExternalLogin()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLogin);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ActionResult ExternalLoginCallback()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginCallback);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ActionResult ExternalLoginConfirmation()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginConfirmation);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ActionResult ExternalLoginsList()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginsList);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ActionResult Manage()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Manage);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public AccountController Actions { get { return MVC.Account; } }
@@ -62,8 +101,16 @@ namespace FirstIssue.WebApp.Controllers
         {
             public readonly string ForgotPassword = "ForgotPassword";
             public readonly string Login = "Login";
+            public readonly string LogOff = "LogOff";
+            public readonly string Disassociate = "Disassociate";
+            public readonly string ExternalLogin = "ExternalLogin";
+            public readonly string ExternalLoginCallback = "ExternalLoginCallback";
+            public readonly string ExternalLoginConfirmation = "ExternalLoginConfirmation";
+            public readonly string ExternalLoginFailure = "ExternalLoginFailure";
+            public readonly string ExternalLoginsList = "ExternalLoginsList";
+            public readonly string RemoveExternalLogins = "RemoveExternalLogins";
+            public readonly string Manage = "Manage";
             public readonly string Register = "Register";
-            public readonly string ResetPassword = "ResetPassword";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -71,11 +118,88 @@ namespace FirstIssue.WebApp.Controllers
         {
             public const string ForgotPassword = "ForgotPassword";
             public const string Login = "Login";
+            public const string LogOff = "LogOff";
+            public const string Disassociate = "Disassociate";
+            public const string ExternalLogin = "ExternalLogin";
+            public const string ExternalLoginCallback = "ExternalLoginCallback";
+            public const string ExternalLoginConfirmation = "ExternalLoginConfirmation";
+            public const string ExternalLoginFailure = "ExternalLoginFailure";
+            public const string ExternalLoginsList = "ExternalLoginsList";
+            public const string RemoveExternalLogins = "RemoveExternalLogins";
+            public const string Manage = "Manage";
             public const string Register = "Register";
-            public const string ResetPassword = "ResetPassword";
         }
 
 
+        static readonly ActionParamsClass_Login s_params_Login = new ActionParamsClass_Login();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Login LoginParams { get { return s_params_Login; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Login
+        {
+            public readonly string returnUrl = "returnUrl";
+            public readonly string model = "model";
+        }
+        static readonly ActionParamsClass_Disassociate s_params_Disassociate = new ActionParamsClass_Disassociate();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Disassociate DisassociateParams { get { return s_params_Disassociate; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Disassociate
+        {
+            public readonly string provider = "provider";
+            public readonly string providerUserId = "providerUserId";
+        }
+        static readonly ActionParamsClass_ExternalLogin s_params_ExternalLogin = new ActionParamsClass_ExternalLogin();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_ExternalLogin ExternalLoginParams { get { return s_params_ExternalLogin; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_ExternalLogin
+        {
+            public readonly string provider = "provider";
+            public readonly string returnUrl = "returnUrl";
+        }
+        static readonly ActionParamsClass_ExternalLoginCallback s_params_ExternalLoginCallback = new ActionParamsClass_ExternalLoginCallback();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_ExternalLoginCallback ExternalLoginCallbackParams { get { return s_params_ExternalLoginCallback; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_ExternalLoginCallback
+        {
+            public readonly string returnUrl = "returnUrl";
+        }
+        static readonly ActionParamsClass_ExternalLoginConfirmation s_params_ExternalLoginConfirmation = new ActionParamsClass_ExternalLoginConfirmation();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_ExternalLoginConfirmation ExternalLoginConfirmationParams { get { return s_params_ExternalLoginConfirmation; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_ExternalLoginConfirmation
+        {
+            public readonly string model = "model";
+            public readonly string returnUrl = "returnUrl";
+        }
+        static readonly ActionParamsClass_ExternalLoginsList s_params_ExternalLoginsList = new ActionParamsClass_ExternalLoginsList();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_ExternalLoginsList ExternalLoginsListParams { get { return s_params_ExternalLoginsList; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_ExternalLoginsList
+        {
+            public readonly string returnUrl = "returnUrl";
+        }
+        static readonly ActionParamsClass_Manage s_params_Manage = new ActionParamsClass_Manage();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Manage ManageParams { get { return s_params_Manage; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Manage
+        {
+            public readonly string message = "message";
+            public readonly string model = "model";
+        }
+        static readonly ActionParamsClass_Register s_params_Register = new ActionParamsClass_Register();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Register RegisterParams { get { return s_params_Register; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Register
+        {
+            public readonly string model = "model";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -88,11 +212,13 @@ namespace FirstIssue.WebApp.Controllers
             {
                 public readonly string ForgotPassword = "ForgotPassword";
                 public readonly string Login = "Login";
+                public readonly string LoginWithExternalProviderPartial = "LoginWithExternalProviderPartial";
                 public readonly string Register = "Register";
                 public readonly string ResetPassword = "ResetPassword";
             }
             public readonly string ForgotPassword = "~/Views/Account/ForgotPassword.cshtml";
             public readonly string Login = "~/Views/Account/Login.cshtml";
+            public readonly string LoginWithExternalProviderPartial = "~/Views/Account/LoginWithExternalProviderPartial.cshtml";
             public readonly string Register = "~/Views/Account/Register.cshtml";
             public readonly string ResetPassword = "~/Views/Account/ResetPassword.cshtml";
         }
@@ -109,9 +235,88 @@ namespace FirstIssue.WebApp.Controllers
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult Login()
+        public override System.Web.Mvc.ActionResult Login(string returnUrl)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult Login(FirstIssue.WebApp.ViewModels.Account.LoginViewModel model, string returnUrl)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult LogOff()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.LogOff);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult Disassociate(string provider, string providerUserId)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Disassociate);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "provider", provider);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "providerUserId", providerUserId);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult ExternalLogin(string provider, string returnUrl)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLogin);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "provider", provider);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult ExternalLoginCallback(string returnUrl)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginCallback);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult ExternalLoginConfirmation(FirstIssue.WebApp.ViewModels.Account.RegisterExternalLoginViewModel model, string returnUrl)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginConfirmation);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult ExternalLoginFailure()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginFailure);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult ExternalLoginsList(string returnUrl)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ExternalLoginsList);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult RemoveExternalLogins()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.RemoveExternalLogins);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult Manage(FirstIssue.WebApp.Controllers.ManageMessageId? message)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Manage);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "message", message);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult Manage(FirstIssue.WebApp.ViewModels.Account.LocalPasswordViewModel model)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Manage);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
             return callInfo;
         }
 
@@ -121,9 +326,10 @@ namespace FirstIssue.WebApp.Controllers
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult ResetPassword()
+        public override System.Web.Mvc.ActionResult Register(FirstIssue.WebApp.ViewModels.Account.RegisterViewModel model)
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ResetPassword);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Register);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
             return callInfo;
         }
 

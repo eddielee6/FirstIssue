@@ -7,6 +7,7 @@ using FirstIssue.WebApp.Models;
 
 namespace FirstIssue.WebApp.Controllers
 {
+    [Authorize]
     public partial class BaseController : Controller
     {
         protected FirstIssueContext _dbContext { get; private set; }
@@ -14,6 +15,18 @@ namespace FirstIssue.WebApp.Controllers
         public BaseController()
         {
             _dbContext = new FirstIssueContext();
+        }
+
+        protected ActionResult RedirectToLocal(string returnUrl)
+        {
+            if (Url.IsLocalUrl(returnUrl))
+            {
+                return Redirect(returnUrl);
+            }
+            else
+            {
+                return RedirectToAction(MVC.Home.Index());
+            }
         }
     }
 }

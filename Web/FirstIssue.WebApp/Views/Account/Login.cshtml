@@ -1,9 +1,46 @@
-﻿@{
+﻿@model FirstIssue.WebApp.ViewModels.Account.LoginViewModel
+
+@{
     ViewBag.Title = "Login";
     ViewBag.Description = "";
     Layout = MVC.Shared.Views.Master; 
 }
 
-<div class="hero-unit">
-    <h1>@ViewBag.Title</h1>
+<section class="hero-unit">
+    <hgroup class="title">
+        <h1>@ViewBag.Title</h1>
+    </hgroup>
+</section>
+
+<div class="row-fluid">
+    <div class="span6" id="loginForm">
+        @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <p>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </p>
+            <p>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </p>
+            <p>
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe)
+            </p>
+            <p>
+                <input type="submit" value="Log in" />
+            </p>
+        }
+    </div>
+
+    <div class="span6" id="socialLoginForm">
+        <h2>Login with:</h2>
+        @Html.Action(MVC.Account.ExternalLoginsList((string)ViewBag.ReturnUrl))
+    </div>
 </div>

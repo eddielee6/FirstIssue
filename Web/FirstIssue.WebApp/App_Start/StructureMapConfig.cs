@@ -4,12 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Mvc;
-
 using StructureMap;
-
 using FirstIssue.WebApp.AppCode.StructureMap;
 
-namespace FirstIssue.WebApp.App_Start
+namespace FirstIssue.WebApp
 {
     public class StructureMapConfig
     {

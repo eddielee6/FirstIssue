@@ -1,0 +1,29 @@
+﻿@model FirstIssue.WebApp.ViewModels.Account.LocalPasswordViewModel
+@{
+    ViewBag.Title = "Manage Account";
+    Layout = MVC.Shared.Views.Master; 
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+</hgroup>
+
+<p class="message-success">@ViewBag.StatusMessage</p>
+
+<p>You're logged in as <strong>@User.Identity.Name</strong>.</p>
+
+@if (ViewBag.HasLocalPassword)
+{
+    @Html.Partial("_ChangePasswordPartial")
+}
+else
+{ 
+    @Html.Partial("_SetPasswordPartial")
+}
+
+<section id="externalLogins">
+    <a href="@Url.RouteUrl("Account_RemoveExternalLogins")">Remove External Logins</a>
+
+    <h3>Add an external login</h3>
+    @Html.ActionLink("External Logins", MVC.Account.ExternalLoginsList((string)ViewBag.ReturnUrl))
+</section>
