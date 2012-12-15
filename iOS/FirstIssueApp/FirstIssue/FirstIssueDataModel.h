@@ -10,4 +10,9 @@
 
 @interface FirstIssueDataModel : NSObject
 
++ (id)shared;
+
+@property (nonatomic, readonly) NSManagedObjectContext *context;
+@property (nonatomic, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
 @end

@@ -8,31 +8,26 @@
 
 #import "FIMainSplitViewController.h"
 
-@interface FIMainSplitViewController ()
+#import "FIIssuesTableViewController.h"
+#import "FIArticleViewController.h"
+#import "FINewsstand.h"
 
+@interface FIMainSplitViewController ()
+@property (nonatomic, strong) FIIssuesTableViewController *issuesViewController;
+@property (nonatomic, strong) FIArticleViewController *articleViewController;
 @end
 
 @implementation FIMainSplitViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    //_issuesViewController = self.viewControllers
+    [[FINewsstand shared] requestProductData];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (BOOL)splitViewController:(UISplitViewController *)svc shouldHideViewController:(UIViewController *)vc inOrientation:(UIInterfaceOrientation)orientation {
+    return YES;
 }
 
 @end

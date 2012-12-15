@@ -6,8 +6,15 @@
 //  Copyright (c) 2012 First Issue. All rights reserved.
 //
 
+#import <StoreKit/StoreKit.h>
 #import <Foundation/Foundation.h>
 
-@interface FINewsstand : NSObject
+@interface FINewsstand : NSObject <SKPaymentTransactionObserver, SKProductsRequestDelegate>
+
++ (id)shared;
+
+- (void)addIssues:(NSArray *)issues;
+- (void)subscribeFree;
+- (void)requestProductData;
 
 @end

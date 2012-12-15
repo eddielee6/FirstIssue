@@ -4,9 +4,11 @@
 #import "_FIIssue.h"
 
 const struct FIIssueAttributes FIIssueAttributes = {
+	.contentURL = @"contentURL",
+	.coverURL = @"coverURL",
 	.issueID = @"issueID",
 	.issueNumber = @"issueNumber",
-	.publishdate = @"publishdate",
+	.publishDate = @"publishDate",
 	.title = @"title",
 };
 
@@ -56,6 +58,20 @@ const struct FIIssueFetchedProperties FIIssueFetchedProperties = {
 
 	return keyPaths;
 }
+
+
+
+
+@dynamic contentURL;
+
+
+
+
+
+
+@dynamic coverURL;
+
+
 
 
 
@@ -112,7 +128,7 @@ const struct FIIssueFetchedProperties FIIssueFetchedProperties = {
 
 
 
-@dynamic publishdate;
+@dynamic publishDate;
 
 
 

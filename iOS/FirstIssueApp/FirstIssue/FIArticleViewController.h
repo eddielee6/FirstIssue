@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FIArticleViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+- (IBAction)testSubscribe:(id)sender;
 @end

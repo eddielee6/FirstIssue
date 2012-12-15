@@ -5,9 +5,11 @@
 
 
 extern const struct FIIssueAttributes {
+	__unsafe_unretained NSString *contentURL;
+	__unsafe_unretained NSString *coverURL;
 	__unsafe_unretained NSString *issueID;
 	__unsafe_unretained NSString *issueNumber;
-	__unsafe_unretained NSString *publishdate;
+	__unsafe_unretained NSString *publishDate;
 	__unsafe_unretained NSString *title;
 } FIIssueAttributes;
 
@@ -25,6 +27,8 @@ extern const struct FIIssueFetchedProperties {
 
 
 
+
+
 @interface FIIssueID : NSManagedObjectID {}
 @end
 
@@ -33,6 +37,26 @@ extern const struct FIIssueFetchedProperties {
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 - (FIIssueID*)objectID;
+
+
+
+
+
+@property (nonatomic, strong) NSString* contentURL;
+
+
+
+//- (BOOL)validateContentURL:(id*)value_ error:(NSError**)error_;
+
+
+
+
+
+@property (nonatomic, strong) NSString* coverURL;
+
+
+
+//- (BOOL)validateCoverURL:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -66,11 +90,11 @@ extern const struct FIIssueFetchedProperties {
 
 
 
-@property (nonatomic, strong) NSDate* publishdate;
+@property (nonatomic, strong) NSDate* publishDate;
 
 
 
-//- (BOOL)validatePublishdate:(id*)value_ error:(NSError**)error_;
+//- (BOOL)validatePublishDate:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -108,6 +132,18 @@ extern const struct FIIssueFetchedProperties {
 @interface _FIIssue (CoreDataGeneratedPrimitiveAccessors)
 
 
+- (NSString*)primitiveContentURL;
+- (void)setPrimitiveContentURL:(NSString*)value;
+
+
+
+
+- (NSString*)primitiveCoverURL;
+- (void)setPrimitiveCoverURL:(NSString*)value;
+
+
+
+
 - (NSNumber*)primitiveIssueID;
 - (void)setPrimitiveIssueID:(NSNumber*)value;
 
@@ -126,8 +162,8 @@ extern const struct FIIssueFetchedProperties {
 
 
 
-- (NSDate*)primitivePublishdate;
-- (void)setPrimitivePublishdate:(NSDate*)value;
+- (NSDate*)primitivePublishDate;
+- (void)setPrimitivePublishDate:(NSDate*)value;
 
 
 

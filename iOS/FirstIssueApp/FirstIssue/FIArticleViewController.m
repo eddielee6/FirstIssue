@@ -8,31 +8,22 @@
 
 #import "FIArticleViewController.h"
 
+#import "FINewsstand.h"
+
 @interface FIArticleViewController ()
 
 @end
 
 @implementation FIArticleViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://firstissue.co"]];
+    [_webView loadRequest:request];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)testSubscribe:(id)sender {
+    [[FINewsstand shared] subscribeFree];
 }
-
 @end
