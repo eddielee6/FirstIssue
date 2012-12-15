@@ -15,6 +15,6 @@ namespace FirstIssue.WebApp.Models
 
         public string Name { get; set; }
 
-        public Magazine Magazine { get; set; }
+        public Magazine Magazine { get; set; }        
     }
 }

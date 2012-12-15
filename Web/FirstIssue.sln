@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstIssue.WebApp", "FirstIssue.WebApp\FirstIssue.WebApp.csproj", "{67E25830-EE9C-42F8-A08E-68A273832AA9}"
 EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "FirstIssue.BackgroundServices", "FirstIssue.BackgroundServices\FirstIssue.BackgroundServices.ccproj", "{B9EAF3D1-7085-4675-AD51-A7BBA1A865EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PushNotificationService", "PushNotificationService\PushNotificationService.csproj", "{B71AC9B5-58C0-4DCF-8D3F-FA3F1A702F02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{67E25830-EE9C-42F8-A08E-68A273832AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67E25830-EE9C-42F8-A08E-68A273832AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67E25830-EE9C-42F8-A08E-68A273832AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9EAF3D1-7085-4675-AD51-A7BBA1A865EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9EAF3D1-7085-4675-AD51-A7BBA1A865EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9EAF3D1-7085-4675-AD51-A7BBA1A865EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9EAF3D1-7085-4675-AD51-A7BBA1A865EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71AC9B5-58C0-4DCF-8D3F-FA3F1A702F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71AC9B5-58C0-4DCF-8D3F-FA3F1A702F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71AC9B5-58C0-4DCF-8D3F-FA3F1A702F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71AC9B5-58C0-4DCF-8D3F-FA3F1A702F02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
