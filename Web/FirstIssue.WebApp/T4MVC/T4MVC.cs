@@ -28,6 +28,9 @@ public static class MVC
     public static FirstIssue.WebApp.Controllers.BaseController Base = new FirstIssue.WebApp.Controllers.T4MVC_BaseController();
     public static FirstIssue.WebApp.Controllers.ErrorController Error = new FirstIssue.WebApp.Controllers.T4MVC_ErrorController();
     public static FirstIssue.WebApp.Controllers.HomeController Home = new FirstIssue.WebApp.Controllers.T4MVC_HomeController();
+    public static FirstIssue.WebApp.Controllers.MagazineController Magazine = new FirstIssue.WebApp.Controllers.T4MVC_MagazineController();
+    public static T4MVC.ArticleController Article = new T4MVC.ArticleController();
+    public static T4MVC.IssueController Issue = new T4MVC.IssueController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
 
@@ -54,6 +57,19 @@ public class T4MVC_System_Web_Mvc_ActionResult : System.Web.Mvc.ActionResult, IT
     }
      
     public override void ExecuteResult(System.Web.Mvc.ControllerContext context) { }
+    
+    public string Controller { get; set; }
+    public string Action { get; set; }
+    public string Protocol { get; set; }
+    public RouteValueDictionary RouteValueDictionary { get; set; }
+}
+[GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+public class T4MVC_System_Web_Mvc_ViewResult : System.Web.Mvc.ViewResult, IT4MVCActionResult
+{
+    public T4MVC_System_Web_Mvc_ViewResult(string area, string controller, string action, string protocol = null): base()
+    {
+        this.InitMVCT4Result(area, controller, action, protocol);
+    }
     
     public string Controller { get; set; }
     public string Action { get; set; }

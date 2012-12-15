@@ -23,6 +23,11 @@ namespace FirstIssue.WebApp.Models
 
         public bool IsPublished { get; set; }
 
+        /// <summary>
+        /// Id of blob in azure
+        /// </summary>
+        public string CoverImageId { get; set; }
+
         public virtual ICollection<Article> Articles { get; set; }
     }
 }

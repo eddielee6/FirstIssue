@@ -32,7 +32,7 @@ namespace FirstIssue.WebApp.AppCode.ExtensionMethods
         public static Bitmap GetBitmapResource(this Assembly assembly, string resourceName)
         {
             var imgStream = assembly.GetManifestResourceStream(resourceName);
-            return (Bitmap)Bitmap.FromStream(imgStream);
+            return (Bitmap)Bitmap.FromStream(imgStream);        
         }
     }
 }

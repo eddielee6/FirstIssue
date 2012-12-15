@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using FirstIssue.WebApp.Models.Azure;
 
-namespace FirstIssue.WebApp.AppCode.ExtensionMethods
+namespace System.Web.Mvc
 {
     public static class UrlHelperExtensions
     {
@@ -31,6 +31,41 @@ namespace FirstIssue.WebApp.AppCode.ExtensionMethods
             }
 
             return new MvcHtmlString(uri.ToString());
-        }        
+        }
+
+        public static MvcHtmlString Login(this UrlHelper helper)
+        {
+            return new MvcHtmlString(helper.RouteUrl("Account_Login"));
+        }
+
+        public static MvcHtmlString ForgotPassword(this UrlHelper helper)
+        {
+            return new MvcHtmlString(helper.RouteUrl("Account_ForgotPassword"));
+        }
+
+        public static MvcHtmlString ResetPassword(this UrlHelper helper)
+        {
+            return new MvcHtmlString(helper.RouteUrl("Account_ResetPassword"));
+        }
+
+        public static MvcHtmlString Register(this UrlHelper helper)
+        {
+            return new MvcHtmlString(helper.RouteUrl("Account_Register"));
+        }
+
+        public static MvcHtmlString Home(this UrlHelper helper)
+        {
+            return new MvcHtmlString(helper.RouteUrl("Home_Index"));
+        }
+
+        public static MvcHtmlString About(this UrlHelper helper)
+        {
+            return new MvcHtmlString(helper.RouteUrl("Home_About"));
+        }
+
+        public static MvcHtmlString Magazines(this UrlHelper helper)
+        {
+            return new MvcHtmlString(helper.RouteUrl("Magazine_List"));
+        }
     }
 }

@@ -1,0 +1,7 @@
+﻿<p><a href="http://thatgamecompany.com/games/journey/">Journey</a> for the PlayStation 3 is the best video game I’ve played in a long time.  I’m going to use it to illustrate a larger point about technology, and in doing so, I’m going to spoil the game.  If you have any interest in video games at all, I strongly recommend that you do not read any further until you’ve played it.</p>
+
+<p>Online discourse can be harsh.  Nowhere is this more true than in multiplayer video games.  It’s nearly impossible to play a popular online game without being exposed to — or worse, being the target of — the most vile kinds of <a href="http://en.wikipedia.org/wiki/Wikipedia:Griefing">behaviors</a> and insults, including sexist, racist, and homophobic slurs.</p>
+
+<p>This problem is not confined to video games. Even something as seemingly benign as a comment form on a popular technology blog can trigger profoundly bad behavior. A well-known Penny Arcade comic sums up the phenomenon nicely in the form of <a href="http://www.penny-arcade.com/comic/2004/03/19/">John Gabriel’s Greater Internet Fuckwad Theory</a>, which states: Normal Person + Anonymity + Audience = Total Fuckwad.</p>
+
+<p>Many remedies have been tried: moderation, the use of “real names” (whatever that means), increasingly complex privacy settings, user voting, karma scores, etc.  Sometimes these things help, but often only a little — and they all require constant vigilance.</p>

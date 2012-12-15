@@ -13,28 +13,34 @@ namespace FirstIssue.WebApp
         {
             RegisterIgnoreRoutes(routes);
             RegisterErrorRoutes(routes);
+            RegisterHomeRoutes(routes);
+            RegisterAccountRoutes(routes);
+            RegisterMagazineRoutes(routes);
+        }
 
-            //Home routes
+        private static void RegisterIgnoreRoutes(RouteCollection routes)
+        {
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.IgnoreRoute("{file}.gif");
+            routes.IgnoreRoute("{file}.png");
+            routes.IgnoreRoute("{file}.js");
+            routes.IgnoreRoute("{file}.html");
+            routes.IgnoreRoute("{file}.htm");
+            routes.IgnoreRoute("{file}.css");
+        }
+
+        private static void RegisterMagazineRoutes(RouteCollection routes)
+        {
             routes.MapRoute(
-                name: "Home_Index",
-                url: "",
-                defaults: new { controller = "Home", action = "Index" }
+                "Magazine_List",
+                "Magazines",
+                MVC.Magazine.ListMagazines()
             );
+        }
 
-            routes.MapRoute(
-                name: "Home_About",
-                url: "About",
-                defaults: new { controller = "Home", action = "About" }
-            );
-
-            routes.MapRoute(
-                name: "Home_Contact",
-                url: "Contact",
-                defaults: new { controller = "Home", action = "Contact" }
-            );
-
-
-            //Account routes
+        private static void RegisterAccountRoutes(RouteCollection routes)
+        {
+            // Account routes
             routes.MapRoute(
                 name: "Account_Login",
                 url: "Login",
@@ -60,16 +66,21 @@ namespace FirstIssue.WebApp
             );
         }
 
-        private static void RegisterIgnoreRoutes(RouteCollection routes)
-        {            
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.IgnoreRoute("{file}.gif");
-            routes.IgnoreRoute("{file}.png");
-            routes.IgnoreRoute("{file}.js");
-            routes.IgnoreRoute("{file}.html");
-            routes.IgnoreRoute("{file}.htm");
-            routes.IgnoreRoute("{file}.css");
-        }
+        private static void RegisterHomeRoutes(RouteCollection routes)
+        {
+            // Home routes
+            routes.MapRoute(
+                name: "Home_Index",
+                url: "",
+                defaults: new { controller = "Home", action = "Index" }
+            );
+
+            routes.MapRoute(
+                name: "Home_About",
+                url: "About",
+                defaults: new { controller = "Home", action = "About" }
+            );            
+        }       
 
         private static void RegisterErrorRoutes(RouteCollection routes)
         {
