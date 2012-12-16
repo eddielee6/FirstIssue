@@ -25,11 +25,11 @@ using T4MVC;
 public static class MVC
 {
     public static FirstIssue.WebApp.Controllers.AccountController Account = new FirstIssue.WebApp.Controllers.T4MVC_AccountController();
+    public static FirstIssue.WebApp.Controllers.ArticleController Article = new FirstIssue.WebApp.Controllers.T4MVC_ArticleController();
     public static FirstIssue.WebApp.Controllers.BaseController Base = new FirstIssue.WebApp.Controllers.T4MVC_BaseController();
     public static FirstIssue.WebApp.Controllers.ErrorController Error = new FirstIssue.WebApp.Controllers.T4MVC_ErrorController();
     public static FirstIssue.WebApp.Controllers.HomeController Home = new FirstIssue.WebApp.Controllers.T4MVC_HomeController();
     public static FirstIssue.WebApp.Controllers.MagazineController Magazine = new FirstIssue.WebApp.Controllers.T4MVC_MagazineController();
-    public static T4MVC.ArticleController Article = new T4MVC.ArticleController();
     public static T4MVC.IssueController Issue = new T4MVC.IssueController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
@@ -67,6 +67,19 @@ public class T4MVC_System_Web_Mvc_ActionResult : System.Web.Mvc.ActionResult, IT
 public class T4MVC_System_Web_Mvc_ViewResult : System.Web.Mvc.ViewResult, IT4MVCActionResult
 {
     public T4MVC_System_Web_Mvc_ViewResult(string area, string controller, string action, string protocol = null): base()
+    {
+        this.InitMVCT4Result(area, controller, action, protocol);
+    }
+    
+    public string Controller { get; set; }
+    public string Action { get; set; }
+    public string Protocol { get; set; }
+    public RouteValueDictionary RouteValueDictionary { get; set; }
+}
+[GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+public class T4MVC_System_Web_Mvc_ContentResult : System.Web.Mvc.ContentResult, IT4MVCActionResult
+{
+    public T4MVC_System_Web_Mvc_ContentResult(string area, string controller, string action, string protocol = null): base()
     {
         this.InitMVCT4Result(area, controller, action, protocol);
     }
@@ -139,6 +152,15 @@ namespace Links
                 public static readonly string icon_iphone_2x_png = Url("icon-iphone-2x.png");
             }
         
+        }
+    
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class Resources {
+            private const string URLPATH = "~/Content/Resources";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
+            public static readonly string MagazineTemplate_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/MagazineTemplate.min.css") ? Url("MagazineTemplate.min.css") : Url("MagazineTemplate.css");
+                 
         }
     
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]

@@ -15,6 +15,8 @@ namespace FirstIssue.WebApp.Models
 
         public string Description { get; set; }
 
+        public virtual MagazineStyle MagazineStyle { get; set; }
+
         /// <summary>
         /// Id of blob in azure
         /// </summary>
