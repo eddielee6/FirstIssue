@@ -51,22 +51,22 @@ namespace FirstIssue.WebApp.Models
             //context.SupportedFonts.Add(new SupportedFont { Name = "Avenir" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Baskerville" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Cochin" });
-            context.SupportedFonts.Add(new Font { Name = "Courier" });
+            context.Fonts.Add(new Font { Name = "Courier" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Futura" });
-            context.SupportedFonts.Add(new Font { Name = "Georgia" });
+            context.Fonts.Add(new Font { Name = "Georgia" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "GillSans" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Helvetica" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "HelveticaNeue" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Palatino" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Papyrus" });
-            context.SupportedFonts.Add(new Font { Name = "TimesNewRoman" });
-            context.SupportedFonts.Add(new Font { Name = "Verdana" });
+            context.Fonts.Add(new Font { Name = "TimesNewRoman" });
+            context.Fonts.Add(new Font { Name = "Verdana" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Zapfino" });
         }
 
         private static void AddDefaultStyles(FirstIssueContext context)
         {
-            context.DefaultStyles.Add(new DefaultStyle
+            context.PrebuiltStyles.Add(new PrebuiltStyle
             {
                 Name = "Light",
                 BackgroundColour = "#eeeeee",
@@ -76,7 +76,7 @@ namespace FirstIssue.WebApp.Models
                 ByLineStyle = new TextStyle { FontId = 3, FontColour = "#999999", FontSize = 1.1 }
             });
 
-            context.DefaultStyles.Add(new DefaultStyle
+            context.PrebuiltStyles.Add(new PrebuiltStyle
             {
                 Name = "Dark",
                 BackgroundColour = "#999999",

@@ -44,6 +44,12 @@ namespace FirstIssue.WebApp.Controllers
             return RedirectToRoutePermanent(callInfo.RouteValueDictionary);
         }
 
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.JsonResult GetPrebuiltStyle()
+        {
+            return new T4MVC_System_Web_Mvc_JsonResult(Area, Name, ActionNames.GetPrebuiltStyle);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public MagazineController Actions { get { return MVC.Magazine; } }
@@ -61,17 +67,27 @@ namespace FirstIssue.WebApp.Controllers
         public class ActionNamesClass
         {
             public readonly string ListMagazines = "ListMagazines";
-            public readonly string StyleMagazine = "StyleMagazine";
+            public readonly string StyleCreator = "StyleCreator";
+            public readonly string GetPrebuiltStyle = "GetPrebuiltStyle";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string ListMagazines = "ListMagazines";
-            public const string StyleMagazine = "StyleMagazine";
+            public const string StyleCreator = "StyleCreator";
+            public const string GetPrebuiltStyle = "GetPrebuiltStyle";
         }
 
 
+        static readonly ActionParamsClass_GetPrebuiltStyle s_params_GetPrebuiltStyle = new ActionParamsClass_GetPrebuiltStyle();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_GetPrebuiltStyle GetPrebuiltStyleParams { get { return s_params_GetPrebuiltStyle; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_GetPrebuiltStyle
+        {
+            public readonly string prebuiltStyleId = "prebuiltStyleId";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -83,10 +99,10 @@ namespace FirstIssue.WebApp.Controllers
             public class _ViewNamesClass
             {
                 public readonly string ListMagazines = "ListMagazines";
-                public readonly string StyleMagazine = "StyleMagazine";
+                public readonly string StyleCreator = "StyleCreator";
             }
             public readonly string ListMagazines = "~/Views/Magazine/ListMagazines.cshtml";
-            public readonly string StyleMagazine = "~/Views/Magazine/StyleMagazine.cshtml";
+            public readonly string StyleCreator = "~/Views/Magazine/StyleCreator.cshtml";
         }
     }
 
@@ -101,9 +117,16 @@ namespace FirstIssue.WebApp.Controllers
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult StyleMagazine()
+        public override System.Web.Mvc.ActionResult StyleCreator()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.StyleMagazine);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.StyleCreator);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.JsonResult GetPrebuiltStyle(int prebuiltStyleId)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_JsonResult(Area, Name, ActionNames.GetPrebuiltStyle);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "prebuiltStyleId", prebuiltStyleId);
             return callInfo;
         }
 

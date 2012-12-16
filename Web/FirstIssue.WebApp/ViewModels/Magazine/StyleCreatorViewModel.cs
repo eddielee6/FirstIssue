@@ -8,6 +8,6 @@ namespace FirstIssue.WebApp.ViewModels
 {
     public class StyleCreatorViewModel
     {
-        public IEnumerable<DefaultStyle> DefaultStyles { get; set; }
+        public IEnumerable<PrebuiltStyle> PrebuiltStyles { get; set; }
     }
 }

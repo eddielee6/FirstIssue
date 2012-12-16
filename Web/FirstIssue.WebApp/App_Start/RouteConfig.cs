@@ -40,8 +40,14 @@ namespace FirstIssue.WebApp
 
             routes.MapRoute(
                 "Magazine_Style",
-                "Magazines/Style",
-                MVC.Magazine.StyleMagazine()
+                "Magazines/StyleCreator",
+                MVC.Magazine.StyleCreator()
+            );
+
+            routes.MapRoute(
+                "Get_Default_Style",
+                "Magazines/PrebuiltStyle/{prebuiltStyleId}",
+                MVC.Magazine.GetPrebuiltStyle(prebuiltStyleId: -1)
             );
         }
 

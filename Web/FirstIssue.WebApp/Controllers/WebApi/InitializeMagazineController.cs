@@ -42,14 +42,12 @@ namespace FirstIssue.WebApp.Controllers
         }
 
         // API/{MagazineId}/AppStyle/
-        public JsonResult GetAppStyle(int magazineId)
+        public object GetAppStyle(int magazineId)
         {
-            //return (new {
-            //    Stylesheet = "",
-            //    AppStyle = new object()
-            //});
-
-            return null;
+            return new {
+                Stylesheet = "",
+                AppStyle = new object()
+            };
         }
     }
 }
