@@ -29,8 +29,7 @@ namespace FirstIssue.WebApp.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Font> SupportedFonts { get; set; }
         public DbSet<TextStyle> TextStyles { get; set; }
-        public DbSet<DefaultStyle> DefaultStyles { get; set; }
-        public DbSet<PushTest> PushTest { get; set; }
+        public DbSet<DefaultStyle> DefaultStyles { get; set; }        
         public DbSet<MagazineStyle> MagazineStyles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

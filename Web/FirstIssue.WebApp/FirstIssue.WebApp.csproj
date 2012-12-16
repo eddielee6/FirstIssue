@@ -249,11 +249,12 @@
     <Compile Include="Controllers\WebApi\ActionFilters\UnhandledExceptionFilter.cs" />
     <Compile Include="Controllers\WebApi\ApiBaseController.cs" />
     <Compile Include="Controllers\WebApi\apiController.cs" />
-    <Compile Include="Controllers\WebApi\Receipt.cs" />
-    <Compile Include="Controllers\WebApi\ReceiptVerificationResult.cs" />
-    <Compile Include="Controllers\WebApi\ReceiptVerificationService.cs" />
-    <Compile Include="Controllers\WebApi\SubscriptionReceiptController.cs" />
-    <Compile Include="Controllers\WebApi\SubscriptionReceiptData.cs" />
+    <Compile Include="AppCode\ReceiptValidationService\Receipt.cs" />
+    <Compile Include="AppCode\ReceiptValidationService\ReceiptVerificationService.cs" />
+    <Compile Include="Controllers\WebApi\SubscriberController\RegisterSubscriberResponse.cs" />
+    <Compile Include="Controllers\WebApi\SubscriberController\RegisterSubscriberPayload.cs" />
+    <Compile Include="Controllers\WebApi\SubscriberController\SubscriptionReceiptController.RegisterSubscriber.cs" />
+    <Compile Include="Controllers\WebApi\SubscriberController\SubscriptionReceiptController.cs" />
     <Compile Include="Controllers\WebApi\InitializeMagazineController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
