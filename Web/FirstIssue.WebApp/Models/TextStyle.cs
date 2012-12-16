@@ -11,7 +11,7 @@ namespace FirstIssue.WebApp.Models
     {
         [Key, Column(Order = 0)]
         public int MagazineStyleID { get; set; }
-        public DefaultStyle MagazineStyle { get; set; }
+        public PrebuiltStyle MagazineStyle { get; set; }
 
         [Key, Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

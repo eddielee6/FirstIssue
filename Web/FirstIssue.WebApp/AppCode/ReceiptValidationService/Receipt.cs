@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Newtonsoft.Json.Linq;
 
-namespace FirstIssue.WebApp.Controllers.WebApi
+namespace FirstIssue.WebApp.AppCode.ReceiptValidationService
 {
     [Serializable()]
         public class Receipt

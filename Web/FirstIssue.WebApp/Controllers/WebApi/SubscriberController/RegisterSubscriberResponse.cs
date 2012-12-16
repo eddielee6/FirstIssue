@@ -5,8 +5,8 @@ using System.Web;
 
 namespace FirstIssue.WebApp.Controllers.WebApi
 {
-    public class ReceiptVerificationResult
+    public class RegisterSubscriberResponse
     {
-        public bool IsReceiptValid { get; set; }
+        public int StatusCode { get; set; }        
     }
 }

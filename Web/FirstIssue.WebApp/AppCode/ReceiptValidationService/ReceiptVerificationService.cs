@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Web;
 
-namespace FirstIssue.WebApp.Controllers.WebApi
+namespace FirstIssue.WebApp.AppCode.ReceiptValidationService
 {
     public class ReceiptVerificationService
     {                

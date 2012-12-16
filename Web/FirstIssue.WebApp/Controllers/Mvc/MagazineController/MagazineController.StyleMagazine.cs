@@ -9,12 +9,25 @@ namespace FirstIssue.WebApp.Controllers
 {
     public partial class MagazineController
     {
-        public virtual ActionResult StyleMagazine()
+        public virtual ActionResult StyleCreator()
         {
             var viewModel = new StyleCreatorViewModel();
-            viewModel.DefaultStyles = _dbContext.DefaultStyles;
+            viewModel.PrebuiltStyles = _dbContext.PrebuiltStyles;
             return View(viewModel);
         }
 
+        public virtual JsonResult GetPrebuiltStyle(int prebuiltStyleId)
+        {
+            return Json(_dbContext.PrebuiltStyles.
+                Include("TitleStyle").
+                Include("TitleStyle.Font").
+                Include("SubTitleStyle").
+                Include("SubTitleStyle.Font").
+                Include("BodyStyle").
+                Include("BodyStyle.Font").
+                Include("ByLineStyle").
+                Include("ByLineStyle.Font").
+                Single(s => s.PrebuiltStyleID == prebuiltStyleId));
+        }
     }
 }
