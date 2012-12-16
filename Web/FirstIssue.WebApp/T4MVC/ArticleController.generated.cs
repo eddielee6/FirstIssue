@@ -20,10 +20,57 @@ using System.Web.Mvc.Ajax;
 using System.Web.Mvc.Html;
 using System.Web.Routing;
 using T4MVC;
-namespace T4MVC
+namespace FirstIssue.WebApp.Controllers
 {
-    public class ArticleController
+    public partial class ArticleController
     {
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ArticleController() { }
+
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        protected ArticleController(Dummy d) { }
+
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        protected RedirectToRouteResult RedirectToAction(ActionResult result)
+        {
+            var callInfo = result.GetT4MVCResult();
+            return RedirectToRoute(callInfo.RouteValueDictionary);
+        }
+
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        protected RedirectToRouteResult RedirectToActionPermanent(ActionResult result)
+        {
+            var callInfo = result.GetT4MVCResult();
+            return RedirectToRoutePermanent(callInfo.RouteValueDictionary);
+        }
+
+
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ArticleController Actions { get { return MVC.Article; } }
+        [GeneratedCode("T4MVC", "2.0")]
+        public readonly string Area = "";
+        [GeneratedCode("T4MVC", "2.0")]
+        public readonly string Name = "Article";
+        [GeneratedCode("T4MVC", "2.0")]
+        public const string NameConst = "Article";
+
+        static readonly ActionNamesClass s_actions = new ActionNamesClass();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionNamesClass ActionNames { get { return s_actions; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionNamesClass
+        {
+            public readonly string RenderArticle = "RenderArticle";
+            public readonly string RenderCSS = "RenderCSS";
+        }
+
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionNameConstants
+        {
+            public const string RenderArticle = "RenderArticle";
+            public const string RenderCSS = "RenderCSS";
+        }
+
 
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -35,10 +82,30 @@ namespace T4MVC
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string RenderArticle = "RenderArticle";
             }
+            public readonly string RenderArticle = "~/Views/Article/RenderArticle.cshtml";
         }
     }
 
+    [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+    public class T4MVC_ArticleController : FirstIssue.WebApp.Controllers.ArticleController
+    {
+        public T4MVC_ArticleController() : base(Dummy.Instance) { }
+
+        public override System.Web.Mvc.ViewResult RenderArticle()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ViewResult(Area, Name, ActionNames.RenderArticle);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ContentResult RenderCSS()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ContentResult(Area, Name, ActionNames.RenderCSS);
+            return callInfo;
+        }
+
+    }
 }
 
 #endregion T4MVC

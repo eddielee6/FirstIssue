@@ -79,6 +79,12 @@
     <Reference Include="Hammock.ClientProfile">
       <HintPath>..\packages\Postmark.1.0.14\lib\40\Hammock.ClientProfile.dll</HintPath>
     </Reference>
+    <Reference Include="HelpLibraryManagerLauncher">
+      <HintPath>..\..\..\..\DotNetZip-Documentation-v1.9\Help Viewer 1.0\HelpLibraryManagerLauncher.exe</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\packages\DotNetZip.1.9.1.8\lib\net20\Ionic.Zip.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -112,6 +118,8 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Services.Client" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Spatial, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\System.Spatial.5.1.0\lib\net40\System.Spatial.dll</HintPath>
@@ -237,13 +245,55 @@
     <Compile Include="Controllers\Mvc\HomeController\HomeController.About.cs" />
     <Compile Include="Controllers\Mvc\HomeController\HomeController.Index.cs" />
     <Compile Include="Controllers\Mvc\HomeController\HomeController.cs" />
+    <Compile Include="Controllers\Mvc\ArticleController\ArticleController.cs" />
+    <Compile Include="Controllers\Mvc\ArticleController\ArticleController.RenderArticle.cs" />
     <Compile Include="Controllers\Mvc\MagazineController\MagazineController.ListMagazines.cs" />
     <Compile Include="Controllers\Mvc\MagazineController\MagazineController.cs" />
+    <Compile Include="Controllers\Mvc\MagazineController\MagazineController.StyleMagazine.cs" />
     <Compile Include="Controllers\WebApi\ActionFilters\UnhandledExceptionFilter.cs" />
     <Compile Include="Controllers\WebApi\ApiBaseController.cs" />
+    <Compile Include="Controllers\WebApi\apiController.cs" />
+    <Compile Include="Controllers\WebApi\Receipt.cs" />
+    <Compile Include="Controllers\WebApi\ReceiptVerificationResult.cs" />
+    <Compile Include="Controllers\WebApi\ReceiptVerificationService.cs" />
+    <Compile Include="Controllers\WebApi\SubscriptionReceiptController.cs" />
+    <Compile Include="Controllers\WebApi\SubscriptionReceiptData.cs" />
+    <Compile Include="Controllers\WebApi\InitializeMagazineController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\Azure\CloudStorageAccountFactory.cs" />
+    <Compile Include="Models\Azure\MagazineCoverContext.cs" />
+    <Compile Include="ViewModels\Magazine\ListMagazinesViewModel.cs" />
+    <EmbeddedResource Include="Models\Initializer\elmah.sql" />
+    <Compile Include="Models\Contributor.cs" />
+    <Compile Include="Models\Initializer\FirstIssueInitializer.cs" />
+    <Compile Include="Models\Issue.cs" />
+    <Compile Include="Models\Magazine.cs" />
+    <Compile Include="Models\Subscriber.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\FirstIssueContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\Azure\CloudStorageAccountFactory.cs" />
+    <Compile Include="Models\Azure\MagazineCoverContext.cs" />
+    <Compile Include="Models\MagazineStyle.cs" />
+    <Compile Include="Models\DefaultStyle.cs" />
+    <Compile Include="Models\PushTest.cs" />
+    <Compile Include="Models\TextStyle.cs" />
+    <Compile Include="ViewModels\Magazine\ListMagazinesViewModel.cs" />
+    <Compile Include="ViewModels\Magazine\StyleCreatorViewModel.cs" />
+    <EmbeddedResource Include="Models\Initializer\elmah.sql" />
+    <Compile Include="Models\Contributor.cs" />
+    <Compile Include="Models\Initializer\FirstIssueInitializer.cs" />
+    <Compile Include="Models\Issue.cs" />
+    <Compile Include="Models\Magazine.cs" />
+    <Compile Include="Models\Subscriber.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\FirstIssueContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Font.cs" />
     <Compile Include="T4MVC\AccountController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -303,6 +353,7 @@
     <Content Include="Content\Images\Icons\icon-ipad-2x.png" />
     <Content Include="Content\Images\Icons\icon-iphone-1x.png" />
     <Content Include="Content\Images\Icons\icon-iphone-2x.png" />
+    <EmbeddedResource Include="Content\Resources\MagazineTemplate.css" />
     <Content Include="Content\Styles\bootstrap-responsive.css" />
     <Content Include="Content\Styles\bootstrap.css" />
     <Content Include="Content\Styles\main.css" />
@@ -368,10 +419,11 @@
     <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Magazine\StyleMagazine.cshtml" />
+    <Content Include="Views\Article\RenderArticle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Article\" />
     <Folder Include="Views\Issue\" />
   </ItemGroup>
   <ItemGroup>

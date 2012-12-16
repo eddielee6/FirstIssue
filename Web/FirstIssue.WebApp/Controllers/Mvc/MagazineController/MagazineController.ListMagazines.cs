@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace FirstIssue.WebApp.Controllers
 {
-    public partial class MagazineController 
+    public partial class MagazineController
     {
         /// <summary>
         /// Lists Magazines for logged in user

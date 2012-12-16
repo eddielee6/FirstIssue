@@ -61,12 +61,14 @@ namespace FirstIssue.WebApp.Controllers
         public class ActionNamesClass
         {
             public readonly string ListMagazines = "ListMagazines";
+            public readonly string StyleMagazine = "StyleMagazine";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string ListMagazines = "ListMagazines";
+            public const string StyleMagazine = "StyleMagazine";
         }
 
 
@@ -81,8 +83,10 @@ namespace FirstIssue.WebApp.Controllers
             public class _ViewNamesClass
             {
                 public readonly string ListMagazines = "ListMagazines";
+                public readonly string StyleMagazine = "StyleMagazine";
             }
             public readonly string ListMagazines = "~/Views/Magazine/ListMagazines.cshtml";
+            public readonly string StyleMagazine = "~/Views/Magazine/StyleMagazine.cshtml";
         }
     }
 
@@ -94,6 +98,12 @@ namespace FirstIssue.WebApp.Controllers
         public override System.Web.Mvc.ViewResult ListMagazines()
         {
             var callInfo = new T4MVC_System_Web_Mvc_ViewResult(Area, Name, ActionNames.ListMagazines);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult StyleMagazine()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.StyleMagazine);
             return callInfo;
         }
 

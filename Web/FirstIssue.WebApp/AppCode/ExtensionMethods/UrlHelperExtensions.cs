@@ -67,5 +67,10 @@ namespace System.Web.Mvc
         {
             return new MvcHtmlString(helper.RouteUrl("Magazine_List"));
         }
+
+        public static MvcHtmlString StyleMagazines(this UrlHelper helper)
+        {
+            return new MvcHtmlString(helper.RouteUrl("Magazine_Style"));
+        }
     }
 }
