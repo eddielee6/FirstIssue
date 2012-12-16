@@ -20,25 +20,45 @@ namespace FirstIssue.WebApp.Controllers.WebApi
             return new string[] { "value1", "value2" };
         }
         // GET api/default1/5
+
         public byte[] GetIssue(int id)
         {
 
             byte[] binaryData = new byte[1];
 
+            var issueObject = GetIssueData(id);
+
+            return binaryData;
+        }
+
+        private IssueData GetIssueData(int id)
+        {
+            var issueData = new IssueData();
             var context = new FirstIssueContext();
             var i = (from c in context.Issues
                      where c.IssueId == id
                      select c).FirstOrDefault();
-
-            var a = new IssueData
+            if (i != null)
+            {
+                issueData.IssueId = i.IssueId;
+                issueData.IssueDate = i.PublishDate;
+                issueData.IssueTitle = i.IssueName;
+                
+                foreach (var a in i.Articles.ToList())
                 {
-                    IssueId = i.IssueId,
-                    IssueDate = i.PublishDate,
-                    IssueTitle = i.IssueName
-                };
-
-            return binaryData;
+                    issueData.Articles.Add(new ArticleData
+                    {
+                        Author = a.Author.FullName,
+                        Id = a.ArticleId,
+                        Order = a.Order,
+                        Title = a.Title,
+                        SubTitle = string.Empty
+                    });
+                }
+            }
+            return issueData;
         }
+
 
         // POST api/default1
         public void Post(string value)

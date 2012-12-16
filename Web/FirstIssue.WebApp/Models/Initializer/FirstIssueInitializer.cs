@@ -27,6 +27,12 @@ namespace FirstIssue.WebApp.Models
             var newId = Guid.NewGuid().ToString();
             blobStorage.AddSnapImage(newId, Assembly.GetExecutingAssembly().GetManifestResourceStream("FirstIssue.WebApp.Models.Initializer.DefaultCover.png"));
 
+            AddFonts(context);
+            context.SaveChanges();
+
+            AddDefaultStyles(context);
+            context.SaveChanges();
+
             AddMagazine(context, newId);
             context.SaveChanges();
 
@@ -38,29 +44,23 @@ namespace FirstIssue.WebApp.Models
 
             AddIssue2Articles(context);
             context.SaveChanges();
-
-            AddSupportedFonts(context);
-            context.SaveChanges();
-
-            AddDefaultStyles(context);
-            context.SaveChanges();
         }
 
-        private static void AddSupportedFonts(FirstIssueContext context)
+        private static void AddFonts(FirstIssueContext context)
         {
             //context.SupportedFonts.Add(new SupportedFont { Name = "Avenir" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Baskerville" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Cochin" });
-            context.SupportedFonts.Add(new SupportedFont { Name = "Courier" });
+            context.SupportedFonts.Add(new Font { Name = "Courier" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Futura" });
-            context.SupportedFonts.Add(new SupportedFont { Name = "Georgia" });
+            context.SupportedFonts.Add(new Font { Name = "Georgia" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "GillSans" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Helvetica" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "HelveticaNeue" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Palatino" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Papyrus" });
-            context.SupportedFonts.Add(new SupportedFont { Name = "TimesNewRoman" });
-            context.SupportedFonts.Add(new SupportedFont { Name = "Verdana" });
+            context.SupportedFonts.Add(new Font { Name = "TimesNewRoman" });
+            context.SupportedFonts.Add(new Font { Name = "Verdana" });
             //context.SupportedFonts.Add(new SupportedFont { Name = "Zapfino" });
         }
 
@@ -70,20 +70,20 @@ namespace FirstIssue.WebApp.Models
             {
                 Name = "Light",
                 BackgroundColour = "#eeeeee",
-                TitleStyle = new TextStyle { SupportedFontId = 2, FontColour = "#999999", FontSize = 1.4 },
-                SubTitleStyle = new TextStyle { SupportedFontId = 2, FontColour = "#999999", FontSize = 1.2 },
-                BodyStyle = new TextStyle { SupportedFontId = 3, FontColour = "#999999", FontSize = 1 },
-                ByLineStyle = new TextStyle { SupportedFontId = 3, FontColour = "#999999", FontSize = 1.1 }
+                TitleStyle = new TextStyle { FontId = 2, FontColour = "#999999", FontSize = 1.4 },
+                SubTitleStyle = new TextStyle { FontId = 2, FontColour = "#999999", FontSize = 1.2 },
+                BodyStyle = new TextStyle { FontId = 3, FontColour = "#999999", FontSize = 1 },
+                ByLineStyle = new TextStyle { FontId = 3, FontColour = "#999999", FontSize = 1.1 }
             });
 
             context.DefaultStyles.Add(new DefaultStyle
             {
-                Name = "Light",
-                BackgroundColour = "#eeeeee",
-                TitleStyle = new TextStyle { SupportedFontId = 1, FontColour = "#eeeeee", FontSize = 1.5 },
-                SubTitleStyle = new TextStyle { SupportedFontId = 4, FontColour = "#eeeeee", FontSize = 1.3 },
-                BodyStyle = new TextStyle { SupportedFontId = 4, FontColour = "#eeeeee", FontSize = 0.9 },
-                ByLineStyle = new TextStyle { SupportedFontId = 4, FontColour = "#eeeeee", FontSize = 1 }
+                Name = "Dark",
+                BackgroundColour = "#999999",
+                TitleStyle = new TextStyle { FontId = 1, FontColour = "#eeeeee", FontSize = 1.5 },
+                SubTitleStyle = new TextStyle { FontId = 4, FontColour = "#eeeeee", FontSize = 1.3 },
+                BodyStyle = new TextStyle { FontId = 4, FontColour = "#eeeeee", FontSize = 0.9 },
+                ByLineStyle = new TextStyle { FontId = 4, FontColour = "#eeeeee", FontSize = 1 }
             });
         }
 
@@ -93,7 +93,15 @@ namespace FirstIssue.WebApp.Models
             {
                 Name = "The Magazine",
                 Description = Assembly.GetExecutingAssembly().GetFileResourceAsString("FirstIssue.WebApp.Models.Initializer.MagazineDescription.txt"),
-                DefaultCoverImageId = coverImageId
+                DefaultCoverImageId = coverImageId,
+                MagazineStyle = new MagazineStyle
+                {
+                    BackgroundColour = "#eeeeee",
+                    TitleStyle = new TextStyle { FontId = 2, FontColour = "#999999", FontSize = 1.4 },
+                    SubTitleStyle = new TextStyle { FontId = 2, FontColour = "#999999", FontSize = 1.2 },
+                    BodyStyle = new TextStyle { FontId = 3, FontColour = "#999999", FontSize = 1 },
+                    ByLineStyle = new TextStyle { FontId = 3, FontColour = "#999999", FontSize = 1.1 }
+                }
             };
             context.Magazines.Add(magazine);
         }

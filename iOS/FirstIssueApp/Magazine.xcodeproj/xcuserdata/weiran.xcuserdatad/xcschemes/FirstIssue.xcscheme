@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2487EE6216768AA500DE1B45"
-               BuildableName = "FirstIssue.app"
-               BlueprintName = "FirstIssue"
-               ReferencedContainer = "container:FirstIssue.xcodeproj">
+               BuildableName = "Magazine.app"
+               BlueprintName = "Magazine"
+               ReferencedContainer = "container:Magazine.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2487EE6216768AA500DE1B45"
-            BuildableName = "FirstIssue.app"
-            BlueprintName = "FirstIssue"
-            ReferencedContainer = "container:FirstIssue.xcodeproj">
+            BuildableName = "Magazine.app"
+            BlueprintName = "Magazine"
+            ReferencedContainer = "container:Magazine.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2487EE6216768AA500DE1B45"
-            BuildableName = "FirstIssue.app"
-            BlueprintName = "FirstIssue"
-            ReferencedContainer = "container:FirstIssue.xcodeproj">
+            BuildableName = "Magazine.app"
+            BlueprintName = "Magazine"
+            ReferencedContainer = "container:Magazine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2487EE6216768AA500DE1B45"
-            BuildableName = "FirstIssue.app"
-            BlueprintName = "FirstIssue"
-            ReferencedContainer = "container:FirstIssue.xcodeproj">
+            BuildableName = "Magazine.app"
+            BlueprintName = "Magazine"
+            ReferencedContainer = "container:Magazine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

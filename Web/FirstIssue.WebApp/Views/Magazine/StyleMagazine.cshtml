@@ -1,19 +1,18 @@
-﻿@{
-    ViewBag.Title = "StyleMagazine.cshtml";
+﻿@model FirstIssue.WebApp.ViewModels.StyleCreatorViewModel
+
+@{
+    ViewBag.Title = "Style your magazine";
     Layout = "~/Views/Shared/Master.cshtml";
 }
 
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">
-            <h2>Style Your Magazine</h2>
+            <h2>Style your magazine</h2>
             <div class="row-fluid">
                 <div class="span6">
                     <label>Predefined template</label>
-                    <select>
-                        <option value="light">Light</option>
-                        <option value="dark">Dark</option>
-                    </select>
+                    @Html.DropDownList("DefaultStyleSelect", new SelectList(Model.DefaultStyles, "DefaultStyleID", "Name"))
                     <hr />
                 </div>
                 <div class="span6">

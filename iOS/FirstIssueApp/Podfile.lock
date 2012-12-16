@@ -1,11 +1,14 @@
 
-PODS: 
-- AFNetworking (1.0.1)
-
-COCOAPODS: 0.16.0
-
 SPEC CHECKSUMS: 
+  MGSplitViewController: e0b0bc01aa81e1559765c39e7a764c890dac373a
   AFNetworking: 4c11f857c9a18d65f4257c90a1e74ac49f0ac422
 
 DEPENDENCIES: 
 - AFNetworking
+- MGSplitViewController
+
+PODS: 
+- AFNetworking (1.0.1)
+- MGSplitViewController (1.0.0)
+
+COCOAPODS: 0.16.0
