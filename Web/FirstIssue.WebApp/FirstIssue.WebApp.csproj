@@ -263,7 +263,6 @@
     <Compile Include="Models\Azure\MagazineCoverContext.cs" />
     <Compile Include="Models\MagazineStyle.cs" />
     <Compile Include="Models\DefaultStyle.cs" />
-    <Compile Include="Models\PushTest.cs" />
     <Compile Include="Models\TextStyle.cs" />
     <Compile Include="ViewModels\Magazine\ListMagazinesViewModel.cs" />
     <Compile Include="ViewModels\Magazine\StyleCreatorViewModel.cs" />

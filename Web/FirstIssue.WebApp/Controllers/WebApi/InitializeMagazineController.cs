@@ -44,10 +44,12 @@ namespace FirstIssue.WebApp.Controllers
         // API/{MagazineId}/AppStyle/
         public JsonResult GetAppStyle(int magazineId)
         {
-            return Json(new {
-                Stylesheet = "",
-                AppStyle = new object()
-            });
+            //return (new {
+            //    Stylesheet = "",
+            //    AppStyle = new object()
+            //});
+
+            return null;
         }
     }
 }
