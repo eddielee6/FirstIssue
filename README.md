@@ -1,3 +1,7 @@
+# This project is no longer under development!
+
+
+
 ![First Issue](http://i.imgur.com/qTXxT.png)
 ### Redefining the magazine for the digital age
 
